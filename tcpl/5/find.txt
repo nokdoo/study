@@ -1,0 +1,5 @@
+This shows that the format argument of printf can be an expression too.
+As a second example, let us make some enhancements to the pattern-finding
+program from Section 4.1.
+If you recall, we wired the search pattern deep into the program,
+an obviously unsatisfactory arrangement.

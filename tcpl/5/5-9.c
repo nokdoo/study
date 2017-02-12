@@ -1,7 +1,12 @@
-static char daytab[2][13] = {
-	{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
-	{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-};
+#include <stdio.h>
+
+int day1[] = {0, 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31};
+int day2[] = {0, 31, 289, 31, 30, 31, 30, 31, 30, 31, 30, 31};
+const int *daytab[] = {day1, day2};
+//static int daytab[][13] = {
+//	{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+//	{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+//};
 
 int day_of_year(int year, int month, int day){
 	if(month > 12 || month < 1 || day > 31 || day < 28){
@@ -23,3 +28,8 @@ void month_day(int year, int yearday, int *pmonth, int *pday){
 	*pmonth = i;
 	*pday = yearday;
 }
+
+int main(){
+	printf("%d\n", day_of_year(2017, 2, 30));
+	return 0;
+}	
