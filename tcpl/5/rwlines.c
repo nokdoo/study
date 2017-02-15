@@ -1,3 +1,6 @@
+#include "../libs/getline_.c"
+#include "alloc.c"
+
 #define MAXLEN 1000
 int getline_(char *, int);
 char *alloc(int);
