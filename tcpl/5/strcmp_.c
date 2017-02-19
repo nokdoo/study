@@ -4,7 +4,6 @@
 int strcmp_(char const *s, char const *t){
 	
 	extern int fold;
-	printf("%d\n", fold);
 	for(; (fold) ? (tolower(*s) == tolower(*t)) : (*s == *t); *s++, *t++){
 		if(*s == '\0')
 			return 0;

@@ -1,0 +1,4 @@
+As usual, it's best to divide the program into functions that match
+this natural division, with the main routine conrolling the other function.
+Let us defer the sorting step for a moment, and concentrate on the data structure
+and the input and output.

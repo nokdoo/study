@@ -1,6 +1,8 @@
 package c3;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Show using a StringTokenizer including getting the delimiters back
@@ -41,5 +43,15 @@ public class StrTokDemo4 {
 		printResults("A|B|C|D", process("A|B|C|D"));
 		printResults("A||C|D", process("A||C|D"));
 		printResults("A|||D|E", process("A|||D|E"));
-	}
+		
+		
+		System.out.println("================test============");
+		String inputString = "471,472,570";
+		Matcher toke = Pattern.compile("\\d+").matcher(inputString);
+		while(toke.find()){
+			String courseString = toke.group(0);
+			int courseNumber = Integer.parseInt(courseString);
+			System.out.println(courseNumber);
+			}
+		}
 }
