@@ -1,0 +1,27 @@
+
+#.gitignore파일에 버전관리를 제외할 파일을 추가한다.
+
+#remote 목록을 확인한다.
+git remote
+
+#실제저장소(여기에서는 원격저장소)에 적용하기 위해 변경사항을 추가한다.
+#(.은 전부를 의미 = *)
+git add .
+
+#변경사항을 커밋하여 리모트에 넣을 준비를 완료시킨다.
+git commit -m "comment"
+
+#study원격 저장소의 master에 변경사항을 넣는다.
+git push study master
+
+#원격저장소 추가하기
+git remote add study https://github.com/nokdoo/study
+
+#원격에 잘못 push된 파일, 디렉토리 제거하기
+git rm -r --cached [파일, 디렉토리]
+git commit -m "comment"
+
+#로컬 파일삭제하기
+git rm [파일]
+
+
