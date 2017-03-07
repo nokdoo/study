@@ -1,0 +1,3 @@
+as another example
+items into a comma
+element of the list

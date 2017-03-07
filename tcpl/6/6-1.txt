@@ -1,0 +1,9 @@
+int 
+while 
+int
+while
+auto
+getch
+"haha"
+"haha2"
+//comment
