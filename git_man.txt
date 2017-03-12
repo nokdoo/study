@@ -17,11 +17,14 @@ git push study master
 #원격저장소 추가하기
 git remote add study https://github.com/nokdoo/study
 
+#원격저장소에서 특정 파일만 가져오기
+git fetch study
+git checkout study/master jcook/   jcook/ 이 가져올 파일을 지정하는듯
+
 #원격에 잘못 push된 파일, 디렉토리 제거하기
 git rm -r --cached [파일, 디렉토리]
 git commit -m "comment"
 
 #로컬 파일삭제하기
 git rm [파일]
-
 

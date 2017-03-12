@@ -28,3 +28,12 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
 }
+
+import org.apache.tools.ant.taskdefs.condition.Os
+task checkWin() << {
+	if(Os.isFamily(Os.FAMILY_WINDOWS)){
+		println "** WINDOWS"
+	}else if(Os.isFamily(Os.FAMILY_UNIX)){
+		println "** UNIX"
+	}
+}
