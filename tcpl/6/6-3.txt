@@ -1,0 +1,3 @@
+A practical note: if the tree becomes "unbalanced" because the words dont' arrive in random order, the running time of the program can grow too much.
+As a worst case, if the words are already in order, this program does an expensive simulation of linear search.
+There are generalizations of the binary tree that do not suffer from this worst-case behavior, but we will not describe them here.

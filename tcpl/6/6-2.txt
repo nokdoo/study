@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int 345678i;
+char 345678c;
+int 123456i;
+
+
+int main(){
+	int 123456i;
+	char 123456c;
+	int *123456pi;
+	char *123456pc;
+}
+
+int sub(){
+	int 234567i;
+	char 234567c;
+	char 234567ar[10];
+}

@@ -1,0 +1,28 @@
+하나의 프로그램만으로는 cpu나 i/o를 항상 동작하게 할 수 없기 때문에
+multiprogramming을 통해 cpu가 항상 하나의 작업을 수행하게 만들어 cpu의 사용을 증가시킨다.
+
+os는 memory에 있는 작업을 수행해야 하지만 메모리는 모든 작업을 수용하기에는 크기가 매우 작다.
+따라서 모든 작업은 job pool에 있는 디스크에서 대기한다.
+   	job pool - main memory로의 할당을 기다리며 디스크에 거주하는 process의 집합.
+따라서 memory에 위치한 작업은 job pool에 있는 작업의 부분집합이 될 수 있다.
+
+multiprogrammed system에서는 하나의 작업이 대기중으로 변환한다면 다른 작업을 수행합으로써
+cpu의 사용을 이어나갈 것이다.
+
+multiprogrammed system은 cpu의 자원을 효율적으로 이용하지만 사용자와 interaction을 제공하지는 않는다.
+Time sharing은 이를 보완하기 위한 것이다.
+Time sharing comuter system에 연결된 사용자들은 행동과 명령의 크기가 작은 편이기에 메모리의
+일부만을 필요로 한다.
+사용자들이 초당 7개의 입력을 하더라도 컴퓨터 입장에서는 매우 느린 속도이기 때문에,
+cpu는 그 시간동안 다른 사용자 프로그램을 수행한다.
+Time sharing은 interative computer system을 필요로 한다
+
+memory에 load된 프로그램이라 실행중인 프로그램을 process라고 한다.
+
+메모리가 할당 되지 않은 작업을 모두 수용하기에는 남아 있는 공간이 부족할 때,
+system은 job scheduling을 통해 무엇을 load할지 결정한다.
+
+모든 작업이 준비가 되면 cpu는 cpu scheduling을 통해 작업으 순서를 결정한다.
+
+동시에 작업이 수행되는 동안, 다른 작업과 process scheduling, disk storage, memory management로부터의 영향을 받지 않아야한다.
+
