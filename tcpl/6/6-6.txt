@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+
+#define test 10
+#define haha 15
+#define hello 20

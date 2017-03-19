@@ -1,0 +1,28 @@
+대부분의 컴퓨터는, os code(kernel)과 user code(user process)를 구분짓는 하드웨어 지원을 제공한다.
+
+user process가 시스템(kernel)에 접근하기 위해서는 mode bit를 전환하는 과정이 필요하다.
+
+dual mode of operation은 못된 사용자로부터 os를 보호하는 방법을 제공한다.
+하드웨어에서 동작하는 privileged intructions을 사용자가 사용하려고 하면 하드웨어는
+이를 실행하지 않고 오히려 trap, illegal로 다룬다.
+
+system call은 실행될 때, 소프트웨어 인터럽트로써 하드웨어에 의해 처리된다.
+제어는 interrupt vector를 통해 os내부의 service routine으로 전달되고, mode bit는 kernel mode로 변경된다.
+
+Intel 8088 아키텍처로 만들어진 MS-DOS는 동시에 여러 프로그램이 하나의 장치에 데이터를 쓸 수 있기 때문에
+OS에 위험을 초래한다.
+
+system-call service kernel routine은 os의 일부이다
+kernel은 system call이 발생했는지를 확인하기 위해 interrupting instruction을 조사한다.
+	넘어오는 parameter는 유저 프로그램이 무엇을 요청하는지, 요청은 register, stack, memory 중 어디를
+	통해 넘어왔는지에 대한 정보를 가지고 있다.
+	kernel은 parameter가 옳은지 확인하고, 요청을 수행한 다음, system call을 요청한 명령으로 제어권을 
+	반환한다.
+
+사용자의 프로그램이 illegal instruction을 실행하려고 시도하거나 해당 유저의 메모리 공강이 아닌
+다른 메모리 공간에 접근하려하면 hardware는 이를 os에 trap한다.
+
+trap은 interrupt vector를 통해 os에 제어권을 넘겨준다.
+os는 유저가 요청한 것처럼 프로그램을 비정상종료 시키고 적절한 메세지와 함께
+해당 메모리는 별도의 파일에 dump 시킨다.
+dump파일은 사용자와 프로그래머가 지를 조사하고 수정하고 재시작 하기 위한 파일이다.
