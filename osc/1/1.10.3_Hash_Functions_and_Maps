@@ -1,0 +1,11 @@
+hash는 테이블에 입력값을 저장하는 방식이다.
+입력 값은 연산을 통해서 hash value를 생성하는데 이것이 table의 index로 사용된다.
+이러한 방법은 n 크기의 list를 검색하는데 table을 탐색하기위한 o(n)만 소요되기 때문에 효율적이고
+os에서 널리 사용된다.
+
+하지만 서로 다른 입력값이 하나의 동일한 index값을 가지는 문제점이 존재한다.
+이를 hash collision이라고 하며 이를 해결하기 위해 해당 index의 테이블에 linked list를 연결한다.
+collision이 많아질수록 hash의 효율성은 떨어진다.
+
+hash map은 hash function을 사용하는 것이다.
+hash map은 key-value 쌍으로 구성되어 있으면 key를 이용해서 저장된 값을 가져올 수 있다.
