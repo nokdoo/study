@@ -1,0 +1,11 @@
+embedded computer는 일상에서 볼 수 있는 대부분의 기기를 말한다.
+이들은 보통 자동차, 로봇, 전자렌지 등 특정 작업을 한다.
+system은 원시적인 환경에서 실행되기 때문에 사용자 인터페이스가 거의 없다.
+이런 이유로 system을 관리하는데 시간을 소모하는 경향이 있다.
+
+embedded system은 실시간으로 데이터의 흐름을 처리해야 하기 때문에 real-time operating system을 실행시킨다.
+
+real-time operating system은 정해진 시간내에 작업을 수행하고 그렇지 못하면 실패되도록 설계되어야 한다.
+
+빠른 반응속도와 일괄처리 그리고 시간 제약이 없는 time-sharing system과는 대조적이다.
+
