@@ -1,0 +1,58 @@
+프로그램을 실행할 수 있는 환경은 프로그램과 그 프로그램을 사용하는 사용자에게 특정 서비스를 제공한다.
+서비스는 os마다 다르지만 공통적인 class를 확인할 수 있다.
+
+서비스는 개발자의 편의를 위해 제공된다.
+
+ - 사용자에게 유용한 서비스 -
+ 	User interface
+		대부분의 os는 user interface(UI)를 가지고 있다.
+		command-line interface(CLI),
+		batch interface - 명령을 제어하는 명령을 파일에 입력하고 그것을 실행 시킴,
+		graphical user interface(GUI) - 마우스 포인팅을 위한 인터페이스
+	Program execution
+		os는 프로그램을 메모리에 로드하고 실행할 수 있어야 한다.
+		프로그램은 언제든지 종료가 가능해야 한다.
+	I/O operations
+		실행중인 프로그램은 input/output이 필요할텐데, input/output은 프로그램 또는 i/o장치를 수반한다.
+		사용자는 효율성과 안전을 위해서 i/o 장치를 직접 제어할 수 없는데,
+		os가 이를 위한 방법을 제공해야 한다.
+	File-system manipulation
+		프로그램은 파일과 디렉토리를 읽거나 작성해야 한다.
+		프로그램은 이름으로 파일을 생성하거나 삭제하고,
+		주어진 파일을 탐색하고, 파일정보를 나열해야 한다.
+		몇몇 os는 파일에 대한 접근을 위해서 소유권에 기반한 권한관리를 포함한다.
+	Communications
+		통신은 같은 컴퓨터 또는 네트워크 내의 다른 컴퓨터에서 실행되고 있는 프로세스간에 발생한다.
+		통신은 
+			shared memory(두 개 이상의 프로세스가 메모리의 공유된 섹션에 읽거나 쓰는 메모리공간),
+			message passing(미리 정의된 형식의 패킷 정보를 프로세스 간 전달)
+		을 통해 시행된다.
+	Error detection
+		os는 오류를 감지하고 해결해야 한다.
+		에러는 cpu, memory, i/o device, user program에서 발생할 수 있다.
+		os는 각 에러를 적절하게 처리함으로써 correct와 consistent computing을 보장한다.
+		때때로 시스템을 중단시킬수 밖에 없기도 한다.
+
+ - 시스템의 효율성을 보장하는 서비스 -
+ 	Resource allocation
+		다수의 사용자 또는 다수의 작업이 동시에 존재할 때, 
+		자원은 각각에 할당되어야 하고, os는 이 자원을 관리한다.
+		cpu cycles, main memory, file storage 등은 특별한 allocation 코드를 가지고 있는 반면,
+		i/o device와 같은 것은 일반적인 코드를 가지고 있다.
+		예로, cpu를 효율적으로 사용하는지 결정하는데 있어서, 
+		os는 cpu의 속도, 실행되어야 하는 작업, 이용 가능한 register의 개수 등을 고려한 
+		cpu-scheduling routine을 가지고 있다.
+	Accounting
+		사용자가 사용자가 어떤 자원을 얼마나 많이 사용했는지 알고 싶을 때,
+		기록은 통계분석을 위해 사용될 수 있다.
+		통계는 computing services를 강화하기 위해서 시스템을 재구성하고 싶어하는 연구자에게 
+		유용한 도구가 될 것이다.
+	Protection and security
+		저장된 정보의 소유자가 정보의 사용을 제어하고 싶을 수 있다.
+		분할된 프로세스가 동시에 실행될 때 하나의 프로세스가 
+		다른 프로세스나 os자체를 방해하는 것은 불가능하다.
+		protection은 시스템 자원에 대한 모든 접근을 통제한다.
+		security는 각 사용자에게 본인들을 시스템에 인증 받도록 요구한다. (ex. password)
+		이것은 외부 i/o장치, 네트워크까지도 확장된다.
+
+
