@@ -1,25 +1,31 @@
 #include <stdio.h>
-
-#define SWAP(x,y,t) ((t) = (x), (x) = (y), (y) = (t))
-
-void perm(char *list, int i, int n){
-	int j, temp;
-	if(i == n){
-		for(j = 0; j<=n; j++){
-			printf("%c", list[j]);
-		}
-		printf("	");
-	}else{
-		for(j = i; j<=n; j++){
-			SWAP(list[i],list[j],temp);
-			perm(list,i+1,n);
-			SWAP(list[i], list[j],temp);
-		}
-	}
+#include <string.h>
+int count = 0;
+void perm(char *list, int i, int len);
+void swap(char *a, char *b){
+	char tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 int main(){
-	char list[4] = "abc";
-	perm(list, 0, 2);
-	return 0;
+	char list[6] = "abcde";
+	int len = strlen(list);
+
+	perm(list, 0, len);
+	printf("%d\n", count);
+}
+
+void perm(char *list, int i, int len){
+	int j;
+	if(i == len){
+		count++;
+		printf("%s ", list);
+	}else{
+		for(j = i; j<len; j++){
+			swap(&list[i], &list[j]);
+			perm(list, i+1, len);
+			swap(&list[i], &list[j]);
+		}
+	}
 }
