@@ -1,0 +1,5 @@
+protection은 컴퓨터 시스템의 자원에 접근하는 것을 통제하는 메커니즘을 제공한다.
+전에는 multiprogrammed computer에서 여러 사용자들의 걱정이었지만 오늘날에는
+인터넷 네트워크로 연결되어 있기 때문에 protection은 매우 중요해졌다.
+
+system calls은 자원에 대한 권한 설정과 사용자에 대한 접근 권한을 통제하는 protection을 제공한다.
