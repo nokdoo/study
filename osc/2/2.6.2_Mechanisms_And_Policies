@@ -1,0 +1,7 @@
+mechanism과 policy는 각각 '어떻게'와 '무엇을'을 정의한다.
+예를 들어 timer constuct는 cpu의 보호를 어떻게 보장할 것인지, 특정 사용자에게 얼마만큼의 시간을 할당할 것인지 정의 되어 있다.
+os 설계와 구현의 가장 중요한 원칙은 mechanism과 policy를 분리하는 것이다.
+
+policy가 바뀌면하면 mechanism의 특정 파라미터만 변경되도록 결합도를 최소화하는 것이 중요하다.
+
+policy는 자원할당을 결정한다.
