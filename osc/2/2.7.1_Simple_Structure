@@ -1,0 +1,15 @@
+많은 os는 잘 정의된 구조를 가지고 있지 않다.
+시간이 지남에 따라 처음에 설계했었던 범위를 벗어나는게 보통이다.
+
+예를 들어 MS-DOS의 경우, 인터페이스와 기능의 분리가 제대로 이루어지지 않았다.
+application이 i/o장치에 직접 연결이 가능한 상태에서, 
+application에 에러가 발생하면 전체 시스템에 충돌이 발생한다.
+설계자들은 Intel 8088이 dual mode와 hardware protection을 지원하지 않았기 때문에
+접근 가능한 하드웨어를 남겨둘 수 밖에 없었다.
+
+다른 예로 초기 UNIX의 경우, kernel이 system call interface와 hardware사이에 위치했었다.
+이는 file system, cpu scheduling, memory management, system call을 통한 os함수를 제공한다.
+이렇게 하나로 단단히 결합되어 있는 구조는 구현과 유지보수에 어려움을 겪는다.
+또한 커널 내에서의 통신과 인터페이스 과정에서 오버헤드가 발생한다.
+
+

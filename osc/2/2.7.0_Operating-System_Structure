@@ -1,0 +1,4 @@
+복잡하고 큰 시스템일수록, 작업들의 모듈화가 필요하다.
+1장에서는 common component를 살펴보았고 
+이번 장에서는 component간의 연결과 component와 kernel의 융합에 대해 알아볼 것이다.
+
