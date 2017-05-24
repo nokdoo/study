@@ -1,0 +1,26 @@
+리눅스나 솔라리스처럼 매우 효율 적인 성능을 제공하는 single address space를 가지고 있는 os는
+잘 짜여져 있는 하나의 구조를 가진다.
+이들은 또한 새로운 기능을 커널에 동적으로 추가할 수 있는 특징을 가진다.
+
+윈도우즈도 마찬가지로 monolithic이지만, 
+	유저 프로세스로로 실행되는 subsystem에 대한 지원을 포함하는 microkernel system의 특성을 가지고 있다.
+
+Mac OS X
+	mac은 hybrid stucture를 사용한다. layered system을 이루고 있다.
+	Cocoa 환경은 Objective-C프로그래밍 언어에 대한 API를 명세한다.
+	Cocoa layer밑에는 Mach microkernel 과 BSD UNIX kernel으로 이루어진 kernel environment가 있다.
+	Mach microkernel은 remote procedure calls(RPCs)와 interprocess communication(IPC, message passing),
+	thread cehcduling을 지원하고 memory management를 제공한다.
+	BSD component는 BSD 커맨드 라인 인터페이스를 제공하고, 네트워킹, 파일 시스템, POSIX API 실행을 돕는다.
+	kernel env은 장치 드라이버의 개발을 위해, 동적인 loadable modules를 위해서
+	Mach, BSD외에 I/O kit를 제공한다.
+
+iOS
+	Cocoa Touch는 iOS위에서 개발되는 application을 위한 프레임워크를 제공하는 Objective-C의 API 이다.
+	생략
+
+Android
+	안드로이드도 iOS와 유사하게 application 개발을 위한 프레임워크를 제공하는 layered stack을 이루고 있다.
+	생략
+		
+	
