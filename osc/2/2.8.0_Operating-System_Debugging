@@ -1,0 +1,2 @@
+디버깅은 sw, hw에서 error를 찾고 수정하는 작업이다.
+성능 문제는 버그로 간주되고, performance tuning은 디버깅에 포함될 수 있다.

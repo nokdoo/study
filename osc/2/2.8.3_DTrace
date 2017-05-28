@@ -1,0 +1,23 @@
+DTrace는 사용자 프로세스와 커널 양쪽 모두의 실행중인 시스템에 동적으로 조사하는 기술이다.
+
+user-level와 커널의 코드 집합을 이해하고 사용할 수 있는 도구 없이, 이 둘의 상호작용을 디버깅하는 것은 불가능에 가깝다. 도구가 유용해지기 위해서는 생각지 않은 영역을 포함한 시스템 영역을 디버깅 할 수 있어야 하고 시스템의 안정성에 영향을 주지 않아야 한다. 또한 시스템의 사용을 최소화 해야한다.
+DTrace는 동적이고, 안전하고, 낮은 영향을 주는 디버깅 환경을 제공한다.
+
+DTrace 프레임워크와 도구들이 솔라리스 10과 함께 이용되기 전까지 커널 디버깅은 감춰져 있었고, 우연와 오래된 코드, 도구들을 통해 완성되었다. 
+CPU는 실행을 중단시키는 breakpoint를 가지고 있고 디버거에게 현재 시스템의 상태를 결정하게 한다. 이 방법은 시스템의 모든 사용자에게 악영향을 주지 않고는 사용될 수 없다.
+profiling은 실행중인 코드를 결정하기 위해서 주기적으로 명령 포인터를 조사하고, activity를 제외한 통계를 보여준다.
+code는 특정 환경에서 특정 데이터를 방출하기 위한 커널에 포함될 수 있지만, 커널의 속도를 느리게 하고 특정 문제가 디버길 되는 커널 부분에 포함되지 않는 경향이 있다.
+
+대조적으로 DTrace는 중요하고 필수적인 application을 실행 시키는 production system에서 실행되고 시스템에 무해하다. DTrace가 활성화 되면 activity의 속도가 느려지지만 종료되면 시스템을 디버깅 전의 상태로 돌려 놓는다. DTrace는 user-level과 kernel-level에서, user-layer과 kernel-layer에서 발생하는 시스템의 모든 것을 debug한다. 또한 코드를 샅샅이 뒤져 cpu의 개별적 명령이나 커널의 서브루틴 activity를 보여준다.
+
+DTrace는 컴파일러, 프레임워크, 프레임워크 내의 provides of probes, consumers of probes로 구성되어 있다. DTrace provider는 probe를 생성하고, kernel structure는 생성된 probe를 감시한다. probe는 각 probe를 인식하기 위해서 해시테이블에 저장된다. probe가 활성화될 때, 조사될 영역의 코드 일부는 dtrace_probe를 호출하기 위해서 rewrite되고 원래 코드의 연산을 이어나간다. 다른 provider는 다른 종류의 probe를 만들어낸다. 예를 들어 kernel system-call probe는 user-process probe나 io probe와 다른 일을 수행한다.
+
+DTrace는 kernel에서 실행되는 바이트 코드를 생성하는 컴파일러의 특징을 갖는다. 이 코드는 컴파일러에 의해 안전하다는 화신을 얻는다. 예를 들어 loop가 허용되지 않고 특정 kernel state modification만이 요청을 받을 때 허락된다. DTrace를 이용하여 비공개 커널 데이터를 찾을 수 있기 때문에 다른 사용자는 DTrace와 관련된 권한을 얻어야지만 DTrace를 사용할 수 있다. 생성된 코드는 커널에서 실행되고 probe를 실행한다. 또한 user mode의 consumer를 활성화 하며 probe와의 통신을 가능하게 한다.
+
+DTrace consumer는 probe와 그 결과에 관심을 가지는 코드이다. consumer는 provider가 생성한 하나 이상의 probe를 요청한다. probe가 fire하면 커널이 관리하는 데이터를 방출한다. probe가 fire하면 커널 내에서는 enabling control blocks(ECBs)라고 불리는 움직임이 일어난다. 하나의 probe는 두 개 이상의 consumer가 자신에게 관심을 가질 때 multiple ECB를 실행시킨다. 각 ECB에는 해당 ECB를 필터링 하는 if문이 존재한다. 걸러내지 않는 다면 ECB의 action이 실행된다. 대부분의 action은 probe 실행의 포인터 변수와 같은 약간의 데이터를 가져오는 것이다. 이러한 데이터를 모음으로써 사용자 또는 커널의 action을 만들어낼 수 있다. 게다가, 사용자 공간과 커널에서 probe가 fire하는 것은 user-level action이 어떻게 kernel-level의 반응을 일으키는지 보여줄 수 있다. 코드 최적화와 성능 모니터링을 위해서 이러한 데이터는 매우 중요하다.
+
+probe consumer가 일을 마치면 ECBs는 제거된다. probe를 consuming하는 ECBs가 없다면 probe도 제거된다. 여기에는 dtrace_prove를 제거하기 위해 코드를 제작성하고 원래의 코드로 되돌리는 과정이 포함된다. 그러므로 probe가 생성되기 전과 제거된 후에도 시스템은 동일한 상태로 유지될 수 있다.
+
+DTrace는 probe가 너무 많은 메모리와 cpu를 사용해서 시스템이 위험해지지 않도록 한다. probe의 결과가 저장되는 버퍼는 초기값과 최대값을 초과하는지 감시된다. probe의 실행을 위한 cpu 시간도 마찬가지다. 만일 최대치를 넘겨버리면 consumer는 해당 probe와 함께 제거된다. 버퍼는 데이터의 손실을 막기 위해서 각 cpu에 할당된다.
+
+
