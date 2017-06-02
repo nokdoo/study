@@ -28,3 +28,9 @@ git commit -m "comment"
 #로컬 파일삭제하기
 git rm [파일]
 
+#다른 컴퓨터에서 원격저장소에 있는 소스 가져와서 사용하기
+repo에 있는 각 저장소가 폴더로 생성된다.
+git clone github.com/계정/repo를 하면 현재 폴더에 repo가 생성된다. (git init 없이도 clone은 동작)
+git fetch를 통해 repo의 최신정보를 가져온다
+사용한다. 
+----브랜치 사용법도 필요하겠네..
