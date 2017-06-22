@@ -45,9 +45,7 @@
 
  * i/o operation - 디스크, 테이프, serial line, 그 밖의 장치들은 매우 낮은 level에서 전달되어야 한다. 사용자는 특정 장치와 장치의 동작을 위한 operation을 명시해야 한다. 시스템은 사용자의 명시를 장치 또는 controller-specific의 명령어로 전환한다.
 
- user-level 프로그램은 권한을 필요로 하는 장치에만, ..응?
-
- >(User-level programs cannot be trusted to access only devices they should have access to and to access them only when they are otherwise unused.)
+ user-level 프로그램이 권한을 필요로 하는 장치에만 접근하거나, 사용 중이 아닌 장치에만 접근한다고 생각될 수 없다.
 
  * file-system manipulation - 사용자가 관여하지 않아도 되는 파일의 생성, 삭제, 할당, 이름 지정에는 많은 요소가 숨어 있다. 디스크 공간의 블록은 파일에 의해서 사용되고 반드시 관리되어야 한다. 파일을 삭제하는 것은 파일 정보를 제거하고 할당받은 블록을 반환해야 한다. 보호는 적절한 파일 접근을 보장하기 위해서 점검되어야 한다.
 
@@ -76,4 +74,3 @@
 #### 2.11 어떻게 부팅할 os를 선택하도록 설계될 수 있는가? bootstrap grogram은 무엇을 해야 하는가?
 
  * xp와 리눅스의 세 가지 배포판을 실행시키는 것을 생각하자. 각각의 os는 디스크에 저장될 것이다. 시스템이 부팅되는 동안 boot manager라 불리는 특별한 프로그램은 부팅할 os를 결절할 것이다. 이것은 부팅 초기에 os가 부팅되는 것이 아닌 boot manager가 먼저 실행되는 것을 의미한다. boot manager는 어떤 os로 부팅할 것인지 결정하는 역할을 한다. 일반적으로 boot manager는 시스템이 시작되는 동안 인지될 수 있도록 하드 디스크의 특정 위치에 존재한다. boot manager는 부팅할 시스템의 선택권을 사용자에게 제공한다. boot manager는 사용자로부터 선택된 시스템이 없다면 기본값으로 설정된 os로 부팅되도록 설계된다.
-
