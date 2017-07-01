@@ -39,7 +39,7 @@ int getp(){
 			j = pat2[j];
 		}
 	}
-	return j;
+	return j==len ? i-len : -1;
 }
 
 int main(){
