@@ -1,0 +1,4 @@
+Set.
+
+Conllection의 서브클래스인 Set, List는 add, remove, contains, size, inEmpty와 같은 메서드를 제공한다.
+List와의 차이점은 순서를 보존하지 않는 다는 것이다. 또한 Set은 동일한 객체를 (equals()로 결정되는) 중복해서 저장할 수 없다. 이런 특성은 인덱스에 기반한 add(int, Object), get의 메서드를 사라지게 만들었다.
