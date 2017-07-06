@@ -23,7 +23,8 @@ int IsEmpty(){
 
 void Add(element el){
 	if(!IsFull()){
-		rear==qsize-1 ? rear=0 : rear++;
+		//rear==qsize-1 ? rear=0 : rear++;
+		rear = (rear+1) % qsize;
 		e[rear] = el;
 		cnt++;
 	}else{
