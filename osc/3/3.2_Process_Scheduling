@@ -1,0 +1,8 @@
+# 3.2 Process Scheduling
+---
+
+멀티 프로그래밍의 목적은 CPU 이용의 극대화를 위해 동작하고 있는 프로세스를 항상 가지고 있는 것이다. time sharing의 목적은 사용자가 실행 중인 각 프로그램과 대화하기 위해 프로세스간 cpu를 매우 빠르게 전환하는 것이다.
+<br>
+이 목적을 달성하기 위해, process scheduler는 cpu에서 프로그램을 실행하기 위한 available process를 선택한다.
+<br>
+single-processor system에서는 하나보다 많은 실행 중인 프로세스는 존재하지 않는다. 그 외의 프로세스는 cpu가 휴식중이거나 reschedule 될 때까지 기다려야 할 것이다.
