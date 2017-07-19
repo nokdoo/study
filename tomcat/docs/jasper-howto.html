@@ -2,12 +2,32 @@
 <html lang="en">
 
 <head>
-    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="./images/docs-stylesheet.css" rel="stylesheet" type="text/css">
-    <title>Apache Tomcat 8 (8.5.16) - Jasper 2 JSP Engine How To</title>
-    <meta name="author" content="Glenn L. Nielsen">
-    <meta name="author" content="Peter Rossbach">
-    <script type="application/javascript" data-comments-identifier="tomcat-8.5-doc/jasper-howto">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="./images/docs-stylesheet.css" rel="stylesheet"
+	type="text/css">
+<title>Apache Tomcat 8 (8.5.16) - Jasper 2 JSP Engine How To</title>
+<meta name="author" content="Glenn L. Nielsen">
+<meta name="author" content="Peter Rossbach"><script src="jquery/jquery-3.2.1.js"></script>
+<script src="bootstrap/dist/js/bootstrap.js"></script>
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="docs">tomcat</a></li>
+      <li><a href="#">Page 3</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+<script type="application/javascript"
+	data-comments-identifier="tomcat-8.5-doc/jasper-howto">
+	
+	
         "use strict"; // Enable strict mode
 
         (function() {
@@ -37,399 +57,613 @@
                 })(window, document);
             }), false);
         })();
-    </script>
+    
+
+</script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="header">
-                <div>
-                    <div>
-                        <div class="logo noPrint"><a href="http://tomcat.apache.org/"><img alt="Tomcat Home" src="./images/tomcat.png"></a></div>
-                        <div style="height: 1px;"></div>
-                        <div class="asfLogo noPrint"><a href="http://www.apache.org/" target="_blank"><img src="./images/asf-logo.svg" alt="The Apache Software Foundation" style="width: 266px; height: 83px;"></a></div>
-                        <h1>Apache Tomcat 8</h1>
-                        <div class="versionInfo">
-                            Version 8.5.16,
-                            <time datetime="2017-06-21">Jun 21 2017</time></div>
-                        <div style="height: 1px;"></div>
-                        <div style="clear: left;"></div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div id="middle">
-            <div>
-                <div id="mainLeft" class="noprint">
-                    <div>
-                        <nav>
-                            <div>
-                                <h2>Links</h2>
-                                <ul>
-                                    <li><a href="index.html">Docs Home</a></li>
-                                    <li><a href="http://wiki.apache.org/tomcat/FAQ">FAQ</a></li>
-                                    <li><a href="#comments_section">User Comments</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2>User Guide</h2>
-                                <ul>
-                                    <li><a href="introduction.html">1) Introduction</a></li>
-                                    <li><a href="setup.html">2) Setup</a></li>
-                                    <li><a href="appdev/index.html">3) First webapp</a></li>
-                                    <li><a href="deployer-howto.html">4) Deployer</a></li>
-                                    <li><a href="manager-howto.html">5) Manager</a></li>
-                                    <li><a href="realm-howto.html">6) Realms and AAA</a></li>
-                                    <li><a href="security-manager-howto.html">7) Security Manager</a></li>
-                                    <li><a href="jndi-resources-howto.html">8) JNDI Resources</a></li>
-                                    <li><a href="jndi-datasource-examples-howto.html">9) JDBC DataSources</a></li>
-                                    <li><a href="class-loader-howto.html">10) Classloading</a></li>
-                                    <li><a href="jasper-howto.html">11) JSPs</a></li>
-                                    <li><a href="ssl-howto.html">12) SSL/TLS</a></li>
-                                    <li><a href="ssi-howto.html">13) SSI</a></li>
-                                    <li><a href="cgi-howto.html">14) CGI</a></li>
-                                    <li><a href="proxy-howto.html">15) Proxy Support</a></li>
-                                    <li><a href="mbeans-descriptors-howto.html">16) MBeans Descriptors</a></li>
-                                    <li><a href="default-servlet.html">17) Default Servlet</a></li>
-                                    <li><a href="cluster-howto.html">18) Clustering</a></li>
-                                    <li><a href="balancer-howto.html">19) Load Balancer</a></li>
-                                    <li><a href="connectors.html">20) Connectors</a></li>
-                                    <li><a href="monitoring.html">21) Monitoring and Management</a></li>
-                                    <li><a href="logging.html">22) Logging</a></li>
-                                    <li><a href="apr.html">23) APR/Native</a></li>
-                                    <li><a href="virtual-hosting-howto.html">24) Virtual Hosting</a></li>
-                                    <li><a href="aio.html">25) Advanced IO</a></li>
-                                    <li><a href="extras.html">26) Additional Components</a></li>
-                                    <li><a href="maven-jars.html">27) Mavenized</a></li>
-                                    <li><a href="security-howto.html">28) Security Considerations</a></li>
-                                    <li><a href="windows-service-howto.html">29) Windows Service</a></li>
-                                    <li><a href="windows-auth-howto.html">30) Windows Authentication</a></li>
-                                    <li><a href="jdbc-pool.html">31) Tomcat's JDBC Pool</a></li>
-                                    <li><a href="web-socket-howto.html">32) WebSocket</a></li>
-                                    <li><a href="rewrite.html">33) Rewrite</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2>Reference</h2>
-                                <ul>
-                                    <li><a href="RELEASE-NOTES.txt">Release Notes</a></li>
-                                    <li><a href="config/index.html">Configuration</a></li>
-                                    <li><a href="api/index.html">Tomcat Javadocs</a></li>
-                                    <li><a href="servletapi/index.html">Servlet Javadocs</a></li>
-                                    <li><a href="jspapi/index.html">JSP 2.3 Javadocs</a></li>
-                                    <li><a href="elapi/index.html">EL 3.0 Javadocs</a></li>
-                                    <li><a href="websocketapi/index.html">WebSocket 1.1 Javadocs</a></li>
-                                    <li><a href="http://tomcat.apache.org/connectors-doc/">JK 1.2 Documentation</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2>Apache Tomcat Development</h2>
-                                <ul>
-                                    <li><a href="building.html">Building</a></li>
-                                    <li><a href="changelog.html">Changelog</a></li>
-                                    <li><a href="http://wiki.apache.org/tomcat/TomcatVersions">Status</a></li>
-                                    <li><a href="developers.html">Developers</a></li>
-                                    <li><a href="architecture/index.html">Architecture</a></li>
-                                    <li><a href="funcspecs/index.html">Functional Specs.</a></li>
-                                    <li><a href="tribes/introduction.html">Tribes</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-                <div id="mainRight">
-                    <div id="content">
-                        <h2>Jasper 2 JSP Engine How To</h2>
-                        <h3 id="Table_of_Contents">Table of Contents</h3>
-                        <div class="text">
-                            <ul>
-                                <li>
-                                    <a href="#Introduction">Introduction</a>
-                                </li>
-                                <li><a href="#Configuration">Configuration</a></li>
-                                <li><a href="#Known_issues">Known issues</a></li>
-                                <li><a href="#Production_Configuration">Production Configuration</a></li>
-                                <li><a href="#Web_Application_Compilation">Web Application Compilation</a></li>
-                                <li><a href="#Optimisation">Optimisation</a></li>
-                            </ul>
-                        </div>
-                        <h3 id="Introduction">Introduction</h3>
-                        <div class="text">
-
-                            <p>Tomcat 8.5 uses the Jasper 2 JSP Engine to implement the <a href="http://wiki.apache.org/tomcat/Specifications">JavaServer Pages 2.3</a> specification.
-                            </p>
-                            <p class="kor">톰캣 8.5은 <a href="http://wiki.apache.org/tomcat/Specifications">JavaServer Pages 2.3</a> 명세를 구성하기 위해서 Jasper 2 JSP Engine을 사용한다.
-                            </p>
-
-                            <p>Jasper 2 has been redesigned to significantly improve performance over the original Jasper. In addition to general code improvements the following changes were made:</p>
-                            <p class="kor">초기 Jasper보다 성능을 훨씬 향상시키기 위해서 Jasper 2가 다시 설계되었다. 일반 코드 향상 외에도 다음의 변화가 있었다.</p>
-                            <ul>
-                                <li><strong>JSP Custom Tag Pooling</strong> - The java objects instantiated for JSP Custom Tags can now be pooled and reused. This significantly boosts the performance of JSP pages which use custom tags.</li>
-                                <li><strong>Background JSP compilation</strong> - If you make a change to a JSP page which had already been compiled Jasper 2 can recompile that page in the background. The previously compiled JSP page will still be available
-                                    to serve requests. Once the new page has been compiled successfully it will replace the old page. This helps improve availability of your JSP pages on a production server.</li>
-                                <li><strong>Recompile JSP when included page changes</strong> - Jasper 2 can now detect when a page included at compile time from a JSP has changed and then recompile the parent JSP.</li>
-                                <li><strong>JDT used to compile JSP pages</strong> - The Eclipse JDT Java compiler is now used to perform JSP java source code compilation. This compiler loads source dependencies from the container classloader. Ant and javac
-                                    can still be used.</li>
-                            </ul>
-                            <ul class="kor">
-                                <li><strong>JSP Custom Tag Pooling</strong> - JSP Custom Tag에 대해 인스턴스화된 자바 객체는 수집되고 재사용될 수 있다. 이것은 Custom Tag를 사용하는 JSP의 엄청난 성능 향상을 가져온다.</li>
-                                <li><strong>Backgrond JSP compilation</strong> - 이미 컴파일된 JSP 페이지를 바꾼다면 Jasper 2는 해당 페이지를 백그라운드에서 다시 컴파일 할 수 있다. 이전에 컴파일된 JSP페이지는 여전히 서버 요청에 사용될 수 있다. 새로운 페이지의 컴파일이 완료되면 이전의 페이지를 대체한다. 이것은 운영 서버에서 JSP의 availability를 향상시킨다.</li>
-                                <li><strong>Recompile JSP when included page changes</strong> - Jasper 2는 컴파일 시간에 추가된 페이지가 변경되면 이를 감지하고 부모 JSP를 재컴파일 한다.</li>
-                                <li><strong>JDT used to compile JSP pages</strong> - JSP의 자바 소스를 컴파일하기 위해서 Eclipse JDT Java compiler가 사용된다. 이 컴파일러는 컨테이너 클래스 로더로부터 소스 종속성을 로드한다. Ant와 javac는 계속 사용할 수 있다. </li>
-                            </ul>
-
-
-                            <p>Jasper is implemented using the servlet class
-                                <code>org.apache.jasper.servlet.JspServlet</code>.</p>
-                            <p class="kor">Jasper는 <code>org.apache.jasper.servlet.JspServlet</code>를 사용해서 구현된다.</p>
-
-                        </div>
-                        <h3 id="Configuration">Configuration</h3>
-                        <div class="text">
-
-                            <p>By default Jasper is configured for use when doing web application development. See the section <a href="#Production_Configuration">
-Production Configuration</a> for information on configuring Jasper for use on a production Tomcat server.</p>
-
-<p class="kor">기본적으로 Jasper는 웹 어플리케이션을 개발할 때 사용하도록 구성된다. Jasper를 Production 톰캣 서버에서 사용하기 위한 Jasper 구성 정보는 <a href="#Production_Configuration">
-Production Configuration</a>를 참조하라.</p>
-
-                            <p>The servlet which implements Jasper is configured using init parameters in your global <code>$CATALINA_BASE/conf/web.xml</code>.
-                            </p>
-                            <p class="kor">Jasper를 구현하는 서블릿은 <code>$CATALINA_BASE/conf/web.xml</code>의 init 파라미터를 사용해서 구성된다.
-                            </p>
-                            <ul>
-                                <li><strong>checkInterval</strong> - If development is false and checkInterval is greater than zero, background compiles are enabled. checkInterval is the time in seconds between checks to see if a JSP page (and its dependent
-                                    files) needs to be recompiled. Default <code>0</code> seconds.</li>
-
-                                <li><strong>classdebuginfo</strong> - Should the class file be compiled with debugging information? <code>true</code> or <code>false</code>, default
-                                    <code>true</code>.
-                                </li>
-
-                                <li><strong>classpath</strong> - Defines the class path to be used to compile the generated servlets. This parameter only has an effect if the ServletContext attribute org.apache.jasper.Constants.SERVLET_CLASSPATH is not set.
-                                    This attribute is always set when Jasper is used within Tomcat. By default the classpath is created dynamically based on the current web application.</li>
-
-                                <li><strong>compiler</strong> - Which compiler Ant should use to compile JSP pages. The valid values for this are the same as for the compiler attribute of Ant's
-                                    <a href="http://ant.apache.org/manual/Tasks/javac.html#compilervalues">javac</a> task. If the value is not set, then the default Eclipse JDT Java compiler will be used instead of using Ant. There is no default value.
-                                    If this attribute is set then <code>setenv.[sh|bat]</code> should be used to add
-                                    <code>ant.jar</code>, <code>ant-launcher.jar</code> and <code>tools.jar</code> to the <code>CLASSPATH</code> environment variable.</li>
-
-                                <li><strong>compilerSourceVM</strong> - What JDK version are the source files compatible with? (Default value: <code>1.7</code>)</li>
-
-                                <li><strong>compilerTargetVM</strong> - What JDK version are the generated files compatible with? (Default value: <code>1.7</code>)</li>
-
-                                <li><strong>development</strong> - Is Jasper used in development mode? If true, the frequency at which JSPs are checked for modification may be specified via the modificationTestInterval parameter.<code>true</code> or <code>false</code>,
-                                    default <code>true</code>.</li>
-
-                                <li><strong>displaySourceFragment</strong> - Should a source fragment be included in exception messages? <code>true</code> or <code>false</code>, default <code>true</code>.</li>
-
-                                <li><strong>dumpSmap</strong> - Should the SMAP info for JSR45 debugging be dumped to a file? <code>true</code> or <code>false</code>, default
-                                    <code>false</code>. <code>false</code> if suppressSmap is true.</li>
-
-                                <li><strong>enablePooling</strong> - Determines whether tag handler pooling is enabled. This is a compilation option. It will not alter the behaviour of JSPs that have already been compiled. <code>true</code> or <code>false</code>,
-                                    default <code>true</code>.
-                                </li>
-
-                                <li><strong>engineOptionsClass</strong> - Allows specifying the Options class used to configure Jasper. If not present, the default EmbeddedServletOptions will be used. This option is ignored if running under a SecurityManager.
-                                </li>
-
-                                <li><strong>errorOnUseBeanInvalidClassAttribute</strong> - Should Jasper issue an error when the value of the class attribute in an useBean action is not a valid bean class? <code>true</code> or <code>false</code>, default
-                                    <code>true</code>.</li>
-
-                                <li><strong>fork</strong> - Have Ant fork JSP page compiles so they are performed in a separate JVM from Tomcat? <code>true</code> or
-                                    <code>false</code>, default <code>true</code>.</li>
-
-                                <li><strong>genStringAsCharArray</strong> - Should text strings be generated as char arrays, to improve performance in some cases? Default <code>false</code>.</li>
-
-                                <li><strong>ieClassId</strong> - The class-id value to be sent to Internet Explorer when using &lt;jsp:plugin&gt; tags. Default
-                                    <code>clsid:8AD9C840-044E-11D1-B3E9-00805F499D93</code>.</li>
-
-                                <li><strong>javaEncoding</strong> - Java file encoding to use for generating java source files. Default <code>UTF8</code>.</li>
-
-                                <li><strong>keepgenerated</strong> - Should we keep the generated Java source code for each page instead of deleting it? <code>true</code> or
-                                    <code>false</code>, default <code>true</code>.</li>
-
-                                <li><strong>mappedfile</strong> - Should we generate static content with one print statement per input line, to ease debugging?
-                                    <code>true</code> or <code>false</code>, default <code>true</code>.</li>
-
-                                <li><strong>maxLoadedJsps</strong> - The maximum number of JSPs that will be loaded for a web application. If more than this number of JSPs are loaded, the least recently used JSPs will be unloaded so that the number of JSPs
-                                    loaded at any one time does not exceed this limit. A value of zero or less indicates no limit. Default <code>-1</code></li>
-
-                                <li><strong>jspIdleTimeout</strong> - The amount of time in seconds a JSP can be idle before it is unloaded. A value of zero or less indicates never unload. Default <code>-1</code></li>
-
-                                <li><strong>modificationTestInterval</strong> - Causes a JSP (and its dependent files) to not be checked for modification during the specified time interval (in seconds) from the last time the JSP was checked for modification.
-                                    A value of 0 will cause the JSP to be checked on every access. Used in development mode only. Default is <code>4</code> seconds.</li>
-
-                                <li><strong>recompileOnFail</strong> - If a JSP compilation fails should the modificationTestInterval be ignored and the next access trigger a re-compilation attempt? Used in development mode only and is disabled by default
-                                    as compilation may be expensive and could lead to excessive resource usage.</li>
-
-                                <li><strong>scratchdir</strong> - What scratch directory should we use when compiling JSP pages? Default is the work directory for the current web application. This option is ignored if running under a SecurityManager.</li>
-
-                                <li><strong>suppressSmap</strong> - Should the generation of SMAP info for JSR45 debugging be suppressed? <code>true</code> or <code>false</code>, default
-                                    <code>false</code>.</li>
-
-                                <li><strong>trimSpaces</strong> - Should template text that consists entirely of whitespace be removed? <code>true</code> or <code>false</code>, default
-                                    <code>false</code>.</li>
-
-                                <li><strong>xpoweredBy</strong> - Determines whether X-Powered-By response header is added by generated servlet. <code>true</code> or <code>false</code>, default <code>false</code>.</li>
-
-                                <li><strong>strictQuoteEscaping</strong> - When scriptlet expressions are used for attribute values, should the rules in JSP.1.6 for the escaping of quote characters be strictly applied? <code>true</code> or <code>false</code>,
-                                    default
-                                    <code>true</code>.</li>
-
-                                <li><strong>quoteAttributeEL</strong> - When EL is used in an attribute value on a JSP page, should the rules for quoting of attributes described in JSP.1.6 be applied to the expression? <code>true</code> or <code>false</code>,
-                                    default
-                                    <code>true</code>.</li>
-                            </ul>
-                            <ul class="kor">
-                                <li><strong>checkInterval</strong> - <strong>development</strong>가 false이고 <strong>checkInterval</strong>이 0보다 크다면 백그라운드 컴파일러가 활성화된다. <strong>checkInterval</strong>은 JSP페이지와 그 종속 파일의 재컴파일이 필요한지 체크하는 초 단위의 시간이다. 기본값 <code>0</code>초.</li>
-
-                                <li><strong>classdebuginfo</strong> - 클래스 파일은 디버깅 정보와 함께 컴파일되어야 하는가? <code>true</code> or <code>false</code>, 기본값
-                                    <code>true</code>.
-                                </li>
-
-                                <li><strong>classpath</strong> - 생성된 서블릿을 컴파일 하기 위해서 사용되는 class path를 정의한다. 이 파라미터는 ServletContext의 속성인 org.apache.jasper.Constants.SERVLET_CLASSPATH이 설정되지 않았을 경우에만 적용된다. 이 속성은 Jasper가 톰캣 안에서 사용될 때 항상 설정된다. 기본적으로 <strong>classpath</strong>는 현재 웹 어플리케이션에 기반해서 동적으로 생성된다.</li>
-
-                                <li><strong>compiler</strong> - JSP페이지를 컴파일 하기 위해서 Ant 컴파일러가 사용하는 컴파일러. <strong>compiler</strong>에 대한 유효값은 Ant의 <a href="http://ant.apache.org/manual/Tasks/javac.html#compilervalues">javac</a> task 컴파일러 속성과 동일하다. 유효값이 설정되지 않았다면 Eclipse JDT Java compiler가 Ant대신에 사용될 것이다. 기본값은 없다. 이 속성이 설정된다면 <code>setenv.[sh|bat]</code>는
-                                    <code>ant.jar</code>, <code>ant-launcher.jar</code> 그리고 <code>tools.jar</code>를 <code>CLASSPATH</code> 환경 변수에 추가하기 위해서 사용되어야 한다.</li>
-
-                                <li><strong>compilerSourceVM</strong> - 소스 파일과 호환되는 JDK 버전은 무엇인가? (기본값: <code>1.7</code>)</li>
-
-                                <li><strong>compilerTargetVM</strong> - 생성된 파일과 호환되는 버전은 무엇인가? (기본값: <code>1.7</code>)</li>
-
-                                <li><strong>development</strong> - Jasper가 개발 모드에서 사용 되는가? 사용된다면 JSP의 변경을 체크하는 빈도는 <strong>modificationTestInterval</strong> 파라미터를 통해서 지정될 수 있다.<code>true</code> or <code>false</code>,
-                                    기본값 <code>true</code>.</li>
-
-                                <li><strong>displaySourceFragment</strong> - 소스 파편이 예외 메세지에 표함되어야 하는가?S<code>true</code> or <code>false</code>, 기본값 <code>true</code>.</li>
-
-                                <li><strong>dumpSmap</strong> - JSR45 디버깅에 대한 SAMP 정보가 파일로 덤프되어야 하는가? <code>true</code> or <code>false</code>, 기본값
-                                    <code>false</code>.  <strong>suppressSmap</strong>이 true라면 <code>false</code>.</li>
-
-                                <li><strong>enablePooling</strong> - tag handler pooling를 활성화 시킬지 결정한다. 이것은 컴파일 옵션 중 하나이다. 이미 컴파일된 JSP의 동작을 변경하지 않는다. <code>true</code> or <code>false</code>,
-                                    기본값 <code>true</code>.
-                                </li>
-
-                                <li><strong>engineOptionsClass</strong> - Jasper 구성에 사용된 Options 클래스 명세를 허용한다. 존재하지 않는다면, 기본 설정인 <code>EmbeddedServletOptions</code>가 사용된다. 이 설정은 <code>SecurityManager</code> 아래서 실행 중일 경우 무시된다.
-                                </li>
-
-                                <li><strong>errorOnUseBeanInvalidClassAttribute</strong> - useBean 액션에서 클래스 속성의 값이 유효하지 않은 bean 클래스라면 Jasper는 오류를 발생시켜야 하는가? <code>true</code> or <code>false</code>, 기본값
-                                    <code>true</code>.</li>
-
-                                <li><strong>fork</strong> - Ant fork JSP가 컴파일 되면 톰캣으로부터 분리된 JVM에서 동작하는가? <code>true</code> or
-                                    <code>false</code>, 기본값 <code>true</code>.</li>
-
-                                <li><strong>genStringAsCharArray</strong> - 성능을 향상시키기 위해서 텍스트 문자열을 char 배열로 생성되어야 하는가? 기본값 <code>false</code>.</li>
-
-                                <li><strong>ieClassId</strong> - &lt;jsp:plugin&gt; 태그를 사용할 때, class-id 값이 인터넷 익스플로러로 보내진다. 기본
-                                    <code>clsid:8AD9C840-044E-11D1-B3E9-00805F499D93</code>.</li>
-
-                                <li><strong>javaEncoding</strong> - 자바 소스 파일을 생성하기 위해서 사용할 자바 파일 인코딩. 기본값 <code>UTF8</code>.</li>
-
-                                <li><strong>keepgenerated</strong> - 각 페이지에 대해 생성된 자바 소스 코드를 삭제하지 않고 유지해야 하는가?  <code>true</code> or
-                                    <code>false</code>, 기본값 <code>true</code>.</li>
-
-                                <li><strong>mappedfile</strong> - 디버깅을 쉽게 하기 위해서 라인당 하나의 print statement로 static content를 생성해야 하는가?
-                                    <code>true</code> or <code>false</code>, 기본값 <code>true</code>.</li>
-
-                                <li><strong>maxLoadedJsps</strong> - 웹 어플리케이션에 로드될 JSP의 최대 숫자. 이 숫자보다 많은 JSP가 로드된다면 least recently used JSP는 언로드된다. 따라서 로드된 JSP의 숫자는 항상 제한된 숫자를 초과하지 않는다. 값이 0 이하라면 제한이 없음을 나타낸다. 기본값 <code>-1</code></li>
-
-                                <li><strong>jspIdleTimeout</strong> - JSP가 언로드 되기 전에 대기할 수 있는 초 단위 시간. 0 이하의 값은 언로드되지 않음을 나타낸다. 기본값 <code>-1</code></li>
-
-                                <li><strong>modificationTestInterval</strong> - JSP와 그 종속 파일에 대한 변경을 확인한 마지막 시점부터 명시된 시간 간격 동안 다시 확인하지 않는다. 0값을 주면 JSP에 대한 접근이 있을 때마다 변경을 확인한다. 개발모드에서만 사용한다. 기본값 <code>4</code> 초.</li>
-
-                                <li><strong>recompileOnFail</strong> - JSP
-                                    JSP 컴파일이 실패 한다면, <strong>modificationTestInterval</strong>이 무시 되고 다음 접근은 재컴파일 시도를 발생시켜야 하는가? 개발 모드에서만 사용된다. 컴파일 비용이 올라가고 자원 사용을 초과할 수 있기 때문에 기본적으로 사용되지 않는다.</li>
-
-                                <li><strong>scratchdir</strong> - JSP를 컴파일 할 때 사용해야 하는 scratch 디렉토리는 무엇인가? 기본값은 현재 웹 어플리케이션의 work 디렉토리이다. SecurityManager 아래서 실행 중이라면 이 옵션은 무시된다.</li>
-
-                                <li><strong>suppressSmap</strong> - JSR45 디버깅을 위한 SMAP 정보의 생성은 억제되어야 하는가? <code>true</code> or <code>false</code>, 기본값
-                                    <code>false</code>.</li>
-
-                                <li><strong>trimSpaces</strong> - 공백으로만 구성된 템플릿 텍스트는 제거되어야 하는가? <code>true</code> or <code>false</code>, 기본값
-                                    <code>false</code>.</li>
-
-                                <li><strong>xpoweredBy</strong> - X-Powered-By response header가 생성된 서블릿에 의해서 추가되었는지 결정한다. <code>true</code> or <code>false</code>, 기본값 <code>false</code>.</li>
-
-                                <li><strong>strictQuoteEscaping</strong> - scriptlet expression이 속성값으로 사용될 때, quote characters를 벗어나오는 JSP.1.6 규칙이 엄격히 적용되어야 하는가? <code>true</code> or <code>false</code>,
-                                    기본값
-                                    <code>true</code>.</li>
-
-                                <li><strong>quoteAttributeEL</strong> - EL이 JSP 에서 속성 값으로 사용된다면, JSP.1.6에서 설명하는 quoting of attributes에 대한 규칙이 해당 expression에 적용되어야 하는가? <code>true</code> or <code>false</code>,
-                                    기본값
-                                    <code>true</code>.</li>
-                            </ul>
-
-                            <p>The Java compiler from Eclipse JDT in included as the default compiler. It is an advanced Java compiler which will load all dependencies from the Tomcat class loader, which will help tremendously when compiling on large installations
-                                with tens of JARs. On fast servers, this will allow sub-second recompilation cycles for even large JSP pages.</p>
-                            <p class="kor">Eclipse JDT의 자바 컴파일러가 기본 컴파일러로 포함된다. 이것은 톰캣 클래스 로더의 모든 종속성을 로드하는 향상된 컴파일러로, 수십 개의 JAR파일 설치를 컴파일 할 때 많은 도움이 된다. 빠른 서버에서는 큰 JSP에 대해서도 1초 미만의 재컴파일 cycle을 허용한다.</p>
-
-                            <p>Apache Ant, which was used in previous Tomcat releases, can be used instead of the new compiler by configuring the compiler attribute as explained above.
-                            </p>
-                                <p class="kor">이전의 톰캣 버전에서 사용된 Apache Ant는 위에서 설명한 컴파일러 속성을 구성하여 새 컴파일러 대신에 사용될 수 있다.
-                            </p>
-
-                        </div>
-                        <h3 id="Known_issues">Known issues</h3>
-                        <div class="text">
-
-                            <p>As described in
-                                <a href="https://bz.apache.org/bugzilla/show_bug.cgi?id=39089">
-bug 39089</a>, a known JVM issue,
-                                <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6294277">
-bug 6294277</a>, may cause a
-                                <code>java.lang.InternalError: name is too long to represent</code> exception when compiling very large JSPs. If this is observed then it may be worked around by using one of the following:
-                            </p>
-                            <p class="kor">
-                                <a href="https://bz.apache.org/bugzilla/show_bug.cgi?id=39089">
-bug 39089</a>에서 설명한 것처럼,  알려진 JVM 이슈
-                                <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6294277">
-bug 6294277</a>은 매우 큰 JSP를 컴파일 할 때                                 <code>java.lang.InternalError: name is too long to represent</code> 예외를 일으킬 수 있다. 예외가 발생할 때 이 예외가 관측된다면 이것은 다음 중 한 가지를 사용하여 해결될 수 있다.
-                            </p>
-                            <ul>
-                                <li>reduce the size of the JSP</li>
-                                <li>disable SMAP generation and JSR-045 support by setting
-                                    <code>suppressSmap</code> to <code>true</code>.</li>
-                            </ul>
-                            <ul class="kor">
-                                <li>JSP의 크기를 줄인다.</li>
-                                <li><code>suppressSmap</code>를 <code>true</code>로 설정하여, SMAP 생성과 JSR-045 지원을 중단한다.
-                            </ul>
-
-                        </div>
-                        <h3 id="Production_Configuration">Production Configuration</h3>
-                        <div class="text">
-
-                            <p>The main JSP optimization which can be done is precompilation of JSPs. However, this might not be possible (for example, when using the jsp-property-group feature) or practical, in which case the configuration of the Jasper
-                                servlet becomes critical.</p>
-                            <p class="kor">실행될 수 있는 주요 JSP 최적화는 JSP의 사전 컴파일이다. 그러나 이것은 불가능하거나(jsp-property-group 특징을 사용할 때 라던지) 실용적이지 못할 수 있다. 이런 경우에는 Jasper 서블릿의 구성이 중요해진다.</p>
-
-                            <p>When using Jasper 2 in a production Tomcat server you should consider making the following changes from the default configuration.</p>
-                            <p class="kor">production 톰캣 서버에서 Jasper 2를 사용할 때 기본 구성의 다음과 같은 변화를 생각해야 한다.</p>
-                            <ul>
-                                <li><strong>development</strong> - To disable on access checks for JSP pages compilation set this to <code>false</code>.</li>
-                                <li><strong>genStringAsCharArray</strong> - To generate slightly more efficient char arrays, set this to <code>true</code>.</li>
-                                <li><strong>modificationTestInterval</strong> - If development has to be set to
-                                    <code>true</code> for any reason (such as dynamic generation of JSPs), setting this to a high value will improve performance a lot.</li>
-                                <li><strong>trimSpaces</strong> - To remove useless bytes from the response, set this to <code>true</code>.</li>
-                            </ul>
-                            <ul class="kor">
-                                <li><strong>development</strong> - JSP 컴파일에 대한 접근 확인을 중단하기 위해서 이 값을 <code>false</code>로 바꾼다.</li>
-                                <li><strong>genStringAsCharArray</strong> - 조금 더 효율적인 char 배열을 생성하기 위해서 이 값을 <code>true</code>로 바꾼다.</li>
-                                <li><strong>modificationTestInterval</strong> - 어떤 이유에서든(JSP의 동적 생성과 같은), <strong>development</strong> 값이 <code>true</code>라면 이 값을 높게 설정 하는 것은 큰 성능 향상을 보일 것이다.</li>
-                                <li><strong>trimSpaces</strong> - response로부터 불필요한 bytes를 제거하기 위해서 <code>true</code>로 바꾼다.</li>
-                            </ul>
-
-                        </div>
-                        <h3 id="Web_Application_Compilation">Web Application Compilation</h3>
-                        <div class="text">
-
-                            <p>Using Ant is the preferred way to compile web applications using JSPC. Note that when pre-compiling JSPs, SMAP information will only be included in the final classes if suppressSmap is false and compile is true. Use the script
-                                given below (a similar script is included in the "deployer" download) to precompile a webapp:
-                            </p>
-                            <p class="kor">Ant를 사용하는 것은 JSPC를 사용하는 웹 어플리케이션을 컴파일하는데 선호되는 방법이다. JSP를 사전 컴파일 할 때, <strong>suppressSmap</strong>이 false, 컴파일이 true라면 SMAP 정보는 final 클래스에만 포함될 것이다. webapp를 사전 컴파일 하기 위해서 아래에 주어진 스크립트를 사용하자.(유사한 스크립트가 "deployer" download에 있다는데 여기가 어딜까)
-                            </p>
-
-                            <div class="codeBox"><pre><code>&lt;project name="Webapp Precompilation" default="all" basedir="."&gt;
+	<div id="wrapper">
+		<header>
+			<div id="header">
+				<div>
+					<div>
+						<div class="logo noPrint">
+							<a href="http://tomcat.apache.org/"><img alt="Tomcat Home"
+								src="./images/tomcat.png"></a>
+						</div>
+						<div style="height: 1px;"></div>
+						<div class="asfLogo noPrint">
+							<a href="http://www.apache.org/" target="_blank"><img
+								src="./images/asf-logo.svg" alt="The Apache Software Foundation"
+								style="width: 266px; height: 83px;"></a>
+						</div>
+						<h1>Apache Tomcat 8</h1>
+						<div class="versionInfo">
+							Version 8.5.16,
+							<time datetime="2017-06-21">Jun 21 2017</time>
+						</div>
+						<div style="height: 1px;"></div>
+						<div style="clear: left;"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="middle">
+			<div>
+				<div id="mainLeft" class="noprint">
+					<div>
+						<nav>
+							<div>
+								<h2>Links</h2>
+								<ul>
+									<li><a href="index.html">Docs Home</a></li>
+									<li><a href="http://wiki.apache.org/tomcat/FAQ">FAQ</a></li>
+									<li><a href="#comments_section">User Comments</a></li>
+								</ul>
+							</div>
+							<div>
+								<h2>User Guide</h2>
+								<ul>
+									<li><a href="introduction.html">1) Introduction</a></li>
+									<li><a href="setup.html">2) Setup</a></li>
+									<li><a href="appdev/index.html">3) First webapp</a></li>
+									<li><a href="deployer-howto.html">4) Deployer</a></li>
+									<li><a href="manager-howto.html">5) Manager</a></li>
+									<li><a href="realm-howto.html">6) Realms and AAA</a></li>
+									<li><a href="security-manager-howto.html">7) Security
+											Manager</a></li>
+									<li><a href="jndi-resources-howto.html">8) JNDI
+											Resources</a></li>
+									<li><a href="jndi-datasource-examples-howto.html">9)
+											JDBC DataSources</a></li>
+									<li><a href="class-loader-howto.html">10) Classloading</a></li>
+									<li><a href="jasper-howto.html">11) JSPs</a></li>
+									<li><a href="ssl-howto.html">12) SSL/TLS</a></li>
+									<li><a href="ssi-howto.html">13) SSI</a></li>
+									<li><a href="cgi-howto.html">14) CGI</a></li>
+									<li><a href="proxy-howto.html">15) Proxy Support</a></li>
+									<li><a href="mbeans-descriptors-howto.html">16) MBeans
+											Descriptors</a></li>
+									<li><a href="default-servlet.html">17) Default Servlet</a></li>
+									<li><a href="cluster-howto.html">18) Clustering</a></li>
+									<li><a href="balancer-howto.html">19) Load Balancer</a></li>
+									<li><a href="connectors.html">20) Connectors</a></li>
+									<li><a href="monitoring.html">21) Monitoring and
+											Management</a></li>
+									<li><a href="logging.html">22) Logging</a></li>
+									<li><a href="apr.html">23) APR/Native</a></li>
+									<li><a href="virtual-hosting-howto.html">24) Virtual
+											Hosting</a></li>
+									<li><a href="aio.html">25) Advanced IO</a></li>
+									<li><a href="extras.html">26) Additional Components</a></li>
+									<li><a href="maven-jars.html">27) Mavenized</a></li>
+									<li><a href="security-howto.html">28) Security
+											Considerations</a></li>
+									<li><a href="windows-service-howto.html">29) Windows
+											Service</a></li>
+									<li><a href="windows-auth-howto.html">30) Windows
+											Authentication</a></li>
+									<li><a href="jdbc-pool.html">31) Tomcat's JDBC Pool</a></li>
+									<li><a href="web-socket-howto.html">32) WebSocket</a></li>
+									<li><a href="rewrite.html">33) Rewrite</a></li>
+								</ul>
+							</div>
+							<div>
+								<h2>Reference</h2>
+								<ul>
+									<li><a href="RELEASE-NOTES.txt">Release Notes</a></li>
+									<li><a href="config/index.html">Configuration</a></li>
+									<li><a href="api/index.html">Tomcat Javadocs</a></li>
+									<li><a href="servletapi/index.html">Servlet Javadocs</a></li>
+									<li><a href="jspapi/index.html">JSP 2.3 Javadocs</a></li>
+									<li><a href="elapi/index.html">EL 3.0 Javadocs</a></li>
+									<li><a href="websocketapi/index.html">WebSocket 1.1
+											Javadocs</a></li>
+									<li><a href="http://tomcat.apache.org/connectors-doc/">JK
+											1.2 Documentation</a></li>
+								</ul>
+							</div>
+							<div>
+								<h2>Apache Tomcat Development</h2>
+								<ul>
+									<li><a href="building.html">Building</a></li>
+									<li><a href="changelog.html">Changelog</a></li>
+									<li><a href="http://wiki.apache.org/tomcat/TomcatVersions">Status</a></li>
+									<li><a href="developers.html">Developers</a></li>
+									<li><a href="architecture/index.html">Architecture</a></li>
+									<li><a href="funcspecs/index.html">Functional Specs.</a></li>
+									<li><a href="tribes/introduction.html">Tribes</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div id="mainRight">
+					<div id="content">
+						<h2>Jasper 2 JSP Engine How To</h2>
+						<h3 id="Table_of_Contents">Table of Contents</h3>
+						<div class="text">
+							<ul>
+								<li><a href="#Introduction">Introduction</a></li>
+								<li><a href="#Configuration">Configuration</a></li>
+								<li><a href="#Known_issues">Known issues</a></li>
+								<li><a href="#Production_Configuration">Production
+										Configuration</a></li>
+								<li><a href="#Web_Application_Compilation">Web
+										Application Compilation</a></li>
+								<li><a href="#Optimisation">Optimisation</a></li>
+							</ul>
+						</div>
+						<h3 id="Introduction">Introduction</h3>
+						<div class="text">
+
+							<p>
+								Tomcat 8.5 uses the Jasper 2 JSP Engine to implement the <a
+									href="http://wiki.apache.org/tomcat/Specifications">JavaServer
+									Pages 2.3</a> specification.
+							</p>
+							<p class="kor">
+								톰캣 8.5은 <a href="http://wiki.apache.org/tomcat/Specifications">JavaServer
+									Pages 2.3</a> 명세를 구성하기 위해서 Jasper 2 JSP Engine을 사용한다.
+							</p>
+
+							<p>Jasper 2 has been redesigned to significantly improve
+								performance over the original Jasper. In addition to general
+								code improvements the following changes were made:</p>
+							<p class="kor">초기 Jasper보다 성능을 훨씬 향상시키기 위해서 Jasper 2가 다시
+								설계되었다. 일반 코드 향상 외에도 다음의 변화가 있었다.</p>
+							<ul>
+								<li><strong>JSP Custom Tag Pooling</strong> - The java
+									objects instantiated for JSP Custom Tags can now be pooled and
+									reused. This significantly boosts the performance of JSP pages
+									which use custom tags.</li>
+								<li><strong>Background JSP compilation</strong> - If you
+									make a change to a JSP page which had already been compiled
+									Jasper 2 can recompile that page in the background. The
+									previously compiled JSP page will still be available to serve
+									requests. Once the new page has been compiled successfully it
+									will replace the old page. This helps improve availability of
+									your JSP pages on a production server.</li>
+								<li><strong>Recompile JSP when included page
+										changes</strong> - Jasper 2 can now detect when a page included at
+									compile time from a JSP has changed and then recompile the
+									parent JSP.</li>
+								<li><strong>JDT used to compile JSP pages</strong> - The
+									Eclipse JDT Java compiler is now used to perform JSP java
+									source code compilation. This compiler loads source
+									dependencies from the container classloader. Ant and javac can
+									still be used.</li>
+							</ul>
+							<ul class="kor">
+								<li><strong>JSP Custom Tag Pooling</strong> - JSP Custom
+									Tag에 대해 인스턴스화된 자바 객체는 수집되고 재사용될 수 있다. 이것은 Custom Tag를 사용하는 JSP의
+									엄청난 성능 향상을 가져온다.</li>
+								<li><strong>Backgrond JSP compilation</strong> - 이미 컴파일된
+									JSP 페이지를 바꾼다면 Jasper 2는 해당 페이지를 백그라운드에서 다시 컴파일 할 수 있다. 이전에 컴파일된
+									JSP페이지는 여전히 서버 요청에 사용될 수 있다. 새로운 페이지의 컴파일이 완료되면 이전의 페이지를 대체한다.
+									이것은 운영 서버에서 JSP의 availability를 향상시킨다.</li>
+								<li><strong>Recompile JSP when included page
+										changes</strong> - Jasper 2는 컴파일 시간에 추가된 페이지가 변경되면 이를 감지하고 부모 JSP를 재컴파일
+									한다.</li>
+								<li><strong>JDT used to compile JSP pages</strong> - JSP의
+									자바 소스를 컴파일하기 위해서 Eclipse JDT Java compiler가 사용된다. 이 컴파일러는 컨테이너
+									클래스 로더로부터 소스 종속성을 로드한다. Ant와 javac는 계속 사용할 수 있다.</li>
+							</ul>
+
+
+							<p>
+								Jasper is implemented using the servlet class
+								<code>org.apache.jasper.servlet.JspServlet</code>
+								.
+							</p>
+							<p class="kor">
+								Jasper는
+								<code>org.apache.jasper.servlet.JspServlet</code>
+								를 사용해서 구현된다.
+							</p>
+
+						</div>
+						<h3 id="Configuration">Configuration</h3>
+						<div class="text">
+
+							<p>
+								By default Jasper is configured for use when doing web
+								application development. See the section <a
+									href="#Production_Configuration"> Production Configuration</a>
+								for information on configuring Jasper for use on a production
+								Tomcat server.
+							</p>
+
+							<p class="kor">
+								기본적으로 Jasper는 웹 어플리케이션을 개발할 때 사용하도록 구성된다. Jasper를 Production 톰캣
+								서버에서 사용하기 위한 Jasper 구성 정보는 <a href="#Production_Configuration">
+									Production Configuration</a>를 참조하라.
+							</p>
+
+							<p>
+								The servlet which implements Jasper is configured using init
+								parameters in your global
+								<code>$CATALINA_BASE/conf/web.xml</code>
+								.
+							</p>
+							<p class="kor">
+								Jasper를 구현하는 서블릿은
+								<code>$CATALINA_BASE/conf/web.xml</code>
+								의 init 파라미터를 사용해서 구성된다.
+							</p>
+							<ul>
+								<li><strong>checkInterval</strong> - If development is
+									false and checkInterval is greater than zero, background
+									compiles are enabled. checkInterval is the time in seconds
+									between checks to see if a JSP page (and its dependent files)
+									needs to be recompiled. Default <code>0</code> seconds.</li>
+
+								<li><strong>classdebuginfo</strong> - Should the class file
+									be compiled with debugging information? <code>true</code> or <code>false</code>,
+									default <code>true</code>.</li>
+
+								<li><strong>classpath</strong> - Defines the class path to
+									be used to compile the generated servlets. This parameter only
+									has an effect if the ServletContext attribute
+									org.apache.jasper.Constants.SERVLET_CLASSPATH is not set. This
+									attribute is always set when Jasper is used within Tomcat. By
+									default the classpath is created dynamically based on the
+									current web application.</li>
+
+								<li><strong>compiler</strong> - Which compiler Ant should
+									use to compile JSP pages. The valid values for this are the
+									same as for the compiler attribute of Ant's <a
+									href="http://ant.apache.org/manual/Tasks/javac.html#compilervalues">javac</a>
+									task. If the value is not set, then the default Eclipse JDT
+									Java compiler will be used instead of using Ant. There is no
+									default value. If this attribute is set then <code>setenv.[sh|bat]</code>
+									should be used to add <code>ant.jar</code>, <code>ant-launcher.jar</code>
+									and <code>tools.jar</code> to the <code>CLASSPATH</code>
+									environment variable.</li>
+
+								<li><strong>compilerSourceVM</strong> - What JDK version
+									are the source files compatible with? (Default value: <code>1.7</code>)</li>
+
+								<li><strong>compilerTargetVM</strong> - What JDK version
+									are the generated files compatible with? (Default value: <code>1.7</code>)</li>
+
+								<li><strong>development</strong> - Is Jasper used in
+									development mode? If true, the frequency at which JSPs are
+									checked for modification may be specified via the
+									modificationTestInterval parameter.<code>true</code> or <code>false</code>,
+									default <code>true</code>.</li>
+
+								<li><strong>displaySourceFragment</strong> - Should a
+									source fragment be included in exception messages? <code>true</code>
+									or <code>false</code>, default <code>true</code>.</li>
+
+								<li><strong>dumpSmap</strong> - Should the SMAP info for
+									JSR45 debugging be dumped to a file? <code>true</code> or <code>false</code>,
+									default <code>false</code>. <code>false</code> if suppressSmap
+									is true.</li>
+
+								<li><strong>enablePooling</strong> - Determines whether tag
+									handler pooling is enabled. This is a compilation option. It
+									will not alter the behaviour of JSPs that have already been
+									compiled. <code>true</code> or <code>false</code>, default <code>true</code>.
+								</li>
+
+								<li><strong>engineOptionsClass</strong> - Allows specifying
+									the Options class used to configure Jasper. If not present, the
+									default EmbeddedServletOptions will be used. This option is
+									ignored if running under a SecurityManager.</li>
+
+								<li><strong>errorOnUseBeanInvalidClassAttribute</strong> -
+									Should Jasper issue an error when the value of the class
+									attribute in an useBean action is not a valid bean class? <code>true</code>
+									or <code>false</code>, default <code>true</code>.</li>
+
+								<li><strong>fork</strong> - Have Ant fork JSP page compiles
+									so they are performed in a separate JVM from Tomcat? <code>true</code>
+									or <code>false</code>, default <code>true</code>.</li>
+
+								<li><strong>genStringAsCharArray</strong> - Should text
+									strings be generated as char arrays, to improve performance in
+									some cases? Default <code>false</code>.</li>
+
+								<li><strong>ieClassId</strong> - The class-id value to be
+									sent to Internet Explorer when using &lt;jsp:plugin&gt; tags.
+									Default <code>clsid:8AD9C840-044E-11D1-B3E9-00805F499D93</code>.</li>
+
+								<li><strong>javaEncoding</strong> - Java file encoding to
+									use for generating java source files. Default <code>UTF8</code>.</li>
+
+								<li><strong>keepgenerated</strong> - Should we keep the
+									generated Java source code for each page instead of deleting
+									it? <code>true</code> or <code>false</code>, default <code>true</code>.</li>
+
+								<li><strong>mappedfile</strong> - Should we generate static
+									content with one print statement per input line, to ease
+									debugging? <code>true</code> or <code>false</code>, default <code>true</code>.</li>
+
+								<li><strong>maxLoadedJsps</strong> - The maximum number of
+									JSPs that will be loaded for a web application. If more than
+									this number of JSPs are loaded, the least recently used JSPs
+									will be unloaded so that the number of JSPs loaded at any one
+									time does not exceed this limit. A value of zero or less
+									indicates no limit. Default <code>-1</code></li>
+
+								<li><strong>jspIdleTimeout</strong> - The amount of time in
+									seconds a JSP can be idle before it is unloaded. A value of
+									zero or less indicates never unload. Default <code>-1</code></li>
+
+								<li><strong>modificationTestInterval</strong> - Causes a
+									JSP (and its dependent files) to not be checked for
+									modification during the specified time interval (in seconds)
+									from the last time the JSP was checked for modification. A
+									value of 0 will cause the JSP to be checked on every access.
+									Used in development mode only. Default is <code>4</code>
+									seconds.</li>
+
+								<li><strong>recompileOnFail</strong> - If a JSP compilation
+									fails should the modificationTestInterval be ignored and the
+									next access trigger a re-compilation attempt? Used in
+									development mode only and is disabled by default as compilation
+									may be expensive and could lead to excessive resource usage.</li>
+
+								<li><strong>scratchdir</strong> - What scratch directory
+									should we use when compiling JSP pages? Default is the work
+									directory for the current web application. This option is
+									ignored if running under a SecurityManager.</li>
+
+								<li><strong>suppressSmap</strong> - Should the generation
+									of SMAP info for JSR45 debugging be suppressed? <code>true</code>
+									or <code>false</code>, default <code>false</code>.</li>
+
+								<li><strong>trimSpaces</strong> - Should template text that
+									consists entirely of whitespace be removed? <code>true</code>
+									or <code>false</code>, default <code>false</code>.</li>
+
+								<li><strong>xpoweredBy</strong> - Determines whether
+									X-Powered-By response header is added by generated servlet. <code>true</code>
+									or <code>false</code>, default <code>false</code>.</li>
+
+								<li><strong>strictQuoteEscaping</strong> - When scriptlet
+									expressions are used for attribute values, should the rules in
+									JSP.1.6 for the escaping of quote characters be strictly
+									applied? <code>true</code> or <code>false</code>, default <code>true</code>.</li>
+
+								<li><strong>quoteAttributeEL</strong> - When EL is used in
+									an attribute value on a JSP page, should the rules for quoting
+									of attributes described in JSP.1.6 be applied to the
+									expression? <code>true</code> or <code>false</code>, default <code>true</code>.</li>
+							</ul>
+							<ul class="kor">
+								<li><strong>checkInterval</strong> - <strong>development</strong>가
+									false이고 <strong>checkInterval</strong>이 0보다 크다면 백그라운드 컴파일러가
+									활성화된다. <strong>checkInterval</strong>은 JSP페이지와 그 종속 파일의 재컴파일이
+									필요한지 체크하는 초 단위의 시간이다. 기본값 <code>0</code>초.</li>
+
+								<li><strong>classdebuginfo</strong> - 클래스 파일은 디버깅 정보와 함께
+									컴파일되어야 하는가? <code>true</code> or <code>false</code>, 기본값 <code>true</code>.
+								</li>
+
+								<li><strong>classpath</strong> - 생성된 서블릿을 컴파일 하기 위해서 사용되는
+									class path를 정의한다. 이 파라미터는 ServletContext의 속성인
+									org.apache.jasper.Constants.SERVLET_CLASSPATH이 설정되지 않았을 경우에만
+									적용된다. 이 속성은 Jasper가 톰캣 안에서 사용될 때 항상 설정된다. 기본적으로 <strong>classpath</strong>는
+									현재 웹 어플리케이션에 기반해서 동적으로 생성된다.</li>
+
+								<li><strong>compiler</strong> - JSP페이지를 컴파일 하기 위해서 Ant
+									컴파일러가 사용하는 컴파일러. <strong>compiler</strong>에 대한 유효값은 Ant의 <a
+									href="http://ant.apache.org/manual/Tasks/javac.html#compilervalues">javac</a>
+									task 컴파일러 속성과 동일하다. 유효값이 설정되지 않았다면 Eclipse JDT Java compiler가
+									Ant대신에 사용될 것이다. 기본값은 없다. 이 속성이 설정된다면 <code>setenv.[sh|bat]</code>는
+									<code>ant.jar</code>, <code>ant-launcher.jar</code> 그리고 <code>tools.jar</code>를
+									<code>CLASSPATH</code> 환경 변수에 추가하기 위해서 사용되어야 한다.</li>
+
+								<li><strong>compilerSourceVM</strong> - 소스 파일과 호환되는 JDK 버전은
+									무엇인가? (기본값: <code>1.7</code>)</li>
+
+								<li><strong>compilerTargetVM</strong> - 생성된 파일과 호환되는 버전은
+									무엇인가? (기본값: <code>1.7</code>)</li>
+
+								<li><strong>development</strong> - Jasper가 개발 모드에서 사용 되는가?
+									사용된다면 JSP의 변경을 체크하는 빈도는 <strong>modificationTestInterval</strong>
+									파라미터를 통해서 지정될 수 있다.<code>true</code> or <code>false</code>, 기본값
+									<code>true</code>.</li>
+
+								<li><strong>displaySourceFragment</strong> - 소스 파편이 예외 메세지에
+									표함되어야 하는가?S<code>true</code> or <code>false</code>, 기본값 <code>true</code>.</li>
+
+								<li><strong>dumpSmap</strong> - JSR45 디버깅에 대한 SAMP 정보가 파일로
+									덤프되어야 하는가? <code>true</code> or <code>false</code>, 기본값 <code>false</code>.
+									<strong>suppressSmap</strong>이 true라면 <code>false</code>.</li>
+
+								<li><strong>enablePooling</strong> - tag handler pooling를
+									활성화 시킬지 결정한다. 이것은 컴파일 옵션 중 하나이다. 이미 컴파일된 JSP의 동작을 변경하지 않는다. <code>true</code>
+									or <code>false</code>, 기본값 <code>true</code>.</li>
+
+								<li><strong>engineOptionsClass</strong> - Jasper 구성에 사용된
+									Options 클래스 명세를 허용한다. 존재하지 않는다면, 기본 설정인 <code>EmbeddedServletOptions</code>가
+									사용된다. 이 설정은 <code>SecurityManager</code> 아래서 실행 중일 경우 무시된다.</li>
+
+								<li><strong>errorOnUseBeanInvalidClassAttribute</strong> -
+									useBean 액션에서 클래스 속성의 값이 유효하지 않은 bean 클래스라면 Jasper는 오류를 발생시켜야
+									하는가? <code>true</code> or <code>false</code>, 기본값 <code>true</code>.</li>
+
+								<li><strong>fork</strong> - Ant fork JSP를 컴파일 하면 톰캣으로부터 분리된
+									JVM에서 동작하는가? <code>true</code> or <code>false</code>, 기본값 <code>true</code>.</li>
+
+								<li><strong>genStringAsCharArray</strong> - 성능을 향상시키기 위해서
+									텍스트 문자열을 char 배열로 생성되어야 하는가? 기본값 <code>false</code>.</li>
+
+								<li><strong>ieClassId</strong> - &lt;jsp:plugin&gt; 태그를 사용할
+									때, class-id 값이 인터넷 익스플로러로 보내진다. 기본 <code>clsid:8AD9C840-044E-11D1-B3E9-00805F499D93</code>.</li>
+
+								<li><strong>javaEncoding</strong> - 자바 소스 파일을 생성하기 위해서 사용할
+									자바 파일 인코딩. 기본값 <code>UTF8</code>.</li>
+
+								<li><strong>keepgenerated</strong> - 각 페이지에 대해 생성된 자바 소스
+									코드를 삭제하지 않고 유지해야 하는가? <code>true</code> or <code>false</code>,
+									기본값 <code>true</code>.</li>
+
+								<li><strong>mappedfile</strong> - 디버깅을 쉽게 하기 위해서 라인당 하나의
+									print statement로 static content를 생성해야 하는가? <code>true</code> or
+									<code>false</code>, 기본값 <code>true</code>.</li>
+
+								<li><strong>maxLoadedJsps</strong> - 웹 어플리케이션에 로드될 JSP의 최대
+									숫자. 이 숫자보다 많은 JSP가 로드된다면 least recently used JSP는 언로드된다. 따라서
+									로드된 JSP의 숫자는 항상 제한된 숫자를 초과하지 않는다. 값이 0 이하라면 제한이 없음을 나타낸다. 기본값 <code>-1</code></li>
+
+								<li><strong>jspIdleTimeout</strong> - JSP가 언로드 되기 전에 대기할 수
+									있는 초 단위 시간. 0 이하의 값은 언로드되지 않음을 나타낸다. 기본값 <code>-1</code></li>
+
+								<li><strong>modificationTestInterval</strong> - JSP와 그 종속
+									파일에 대한 변경을 확인한 마지막 시점부터 명시된 시간 간격 동안 다시 확인하지 않는다. 0값을 주면 JSP에
+									대한 접근이 있을 때마다 변경을 확인한다. 개발모드에서만 사용한다. 기본값 <code>4</code> 초.</li>
+
+								<li><strong>recompileOnFail</strong> - JSP JSP 컴파일이 실패 한다면,
+									<strong>modificationTestInterval</strong>이 무시 되고 다음 접근은 재컴파일
+									시도를 발생시켜야 하는가? 개발 모드에서만 사용된다. 컴파일 비용이 올라가고 자원 사용을 초과할 수 있기 때문에
+									기본적으로 사용되지 않는다.</li>
+
+								<li><strong>scratchdir</strong> - JSP를 컴파일 할 때 사용해야 하는
+									scratch 디렉토리는 무엇인가? 기본값은 현재 웹 어플리케이션의 work 디렉토리이다.
+									SecurityManager 아래서 실행 중이라면 이 옵션은 무시된다.</li>
+
+								<li><strong>suppressSmap</strong> - JSR45 디버깅을 위한 SMAP 정보의
+									생성은 억제되어야 하는가? <code>true</code> or <code>false</code>, 기본값 <code>false</code>.</li>
+
+								<li><strong>trimSpaces</strong> - 공백으로만 구성된 템플릿 텍스트는 제거되어야
+									하는가? <code>true</code> or <code>false</code>, 기본값 <code>false</code>.</li>
+
+								<li><strong>xpoweredBy</strong> - X-Powered-By response
+									header가 생성된 서블릿에 의해서 추가되었는지 결정한다. <code>true</code> or <code>false</code>,
+									기본값 <code>false</code>.</li>
+
+								<li><strong>strictQuoteEscaping</strong> - scriptlet
+									expression이 속성값으로 사용될 때, quote characters를 벗어나오는 JSP.1.6 규칙이
+									엄격히 적용되어야 하는가? <code>true</code> or <code>false</code>, 기본값 <code>true</code>.</li>
+
+								<li><strong>quoteAttributeEL</strong> - EL이 JSP 에서 속성 값으로
+									사용된다면, JSP.1.6에서 설명하는 quoting of attributes에 대한 규칙이 해당
+									expression에 적용되어야 하는가? <code>true</code> or <code>false</code>,
+									기본값 <code>true</code>.</li>
+							</ul>
+
+							<p>The Java compiler from Eclipse JDT in included as the
+								default compiler. It is an advanced Java compiler which will
+								load all dependencies from the Tomcat class loader, which will
+								help tremendously when compiling on large installations with
+								tens of JARs. On fast servers, this will allow sub-second
+								recompilation cycles for even large JSP pages.</p>
+							<p class="kor">Eclipse JDT의 자바 컴파일러가 기본 컴파일러로 포함된다. 이것은 톰캣
+								클래스 로더의 모든 종속성을 로드하는 향상된 컴파일러로, 수십 개의 JAR파일 설치를 컴파일 할 때 많은 도움이
+								된다. 빠른 서버에서는 큰 JSP에 대해서도 1초 미만의 재컴파일 cycle을 허용한다.</p>
+
+							<p>Apache Ant, which was used in previous Tomcat releases,
+								can be used instead of the new compiler by configuring the
+								compiler attribute as explained above.</p>
+							<p class="kor">이전의 톰캣 버전에서 사용된 Apache Ant는 위에서 설명한 컴파일러 속성을
+								구성하여 새 컴파일러 대신에 사용될 수 있다.</p>
+
+						</div>
+						<h3 id="Known_issues">Known issues</h3>
+						<div class="text">
+
+							<p>
+								As described in <a
+									href="https://bz.apache.org/bugzilla/show_bug.cgi?id=39089">
+									bug 39089</a>, a known JVM issue, <a
+									href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6294277">
+									bug 6294277</a>, may cause a
+								<code>java.lang.InternalError: name is too long to
+									represent</code>
+								exception when compiling very large JSPs. If this is observed
+								then it may be worked around by using one of the following:
+							</p>
+							<p class="kor">
+								<a href="https://bz.apache.org/bugzilla/show_bug.cgi?id=39089">
+									bug 39089</a>에서 설명한 것처럼, 알려진 JVM 이슈 <a
+									href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6294277">
+									bug 6294277</a>은 매우 큰 JSP를 컴파일 할 때
+								<code>java.lang.InternalError: name is too long to
+									represent</code>
+								예외를 일으킬 수 있다. 예외가 발생할 때 이 예외가 관측된다면 이것은 다음 중 한 가지를 사용하여 해결될 수
+								있다.
+							</p>
+							<ul>
+								<li>reduce the size of the JSP</li>
+								<li>disable SMAP generation and JSR-045 support by setting
+									<code>suppressSmap</code> to <code>true</code>.
+								</li>
+							</ul>
+							<ul class="kor">
+								<li>JSP의 크기를 줄인다.</li>
+								<li><code>suppressSmap</code>를 <code>true</code>로 설정하여,
+									SMAP 생성과 JSR-045 지원을 중단한다.
+							</ul>
+
+						</div>
+						<h3 id="Production_Configuration">Production Configuration</h3>
+						<div class="text">
+
+							<p>The main JSP optimization which can be done is
+								precompilation of JSPs. However, this might not be possible (for
+								example, when using the jsp-property-group feature) or
+								practical, in which case the configuration of the Jasper servlet
+								becomes critical.</p>
+							<p class="kor">실행될 수 있는 주요 JSP 최적화는 JSP의 사전 컴파일이다. 그러나 이것은
+								불가능하거나(jsp-property-group 특징을 사용할 때 라던지) 실용적이지 못할 수 있다. 이런 경우에는
+								Jasper 서블릿의 구성이 중요해진다.</p>
+
+							<p>When using Jasper 2 in a production Tomcat server you
+								should consider making the following changes from the default
+								configuration.</p>
+							<p class="kor">production 톰캣 서버에서 Jasper 2를 사용할 때 기본 구성의 다음과
+								같은 변화를 생각해야 한다.</p>
+							<ul>
+								<li><strong>development</strong> - To disable on access
+									checks for JSP pages compilation set this to <code>false</code>.</li>
+								<li><strong>genStringAsCharArray</strong> - To generate
+									slightly more efficient char arrays, set this to <code>true</code>.</li>
+								<li><strong>modificationTestInterval</strong> - If
+									development has to be set to <code>true</code> for any reason
+									(such as dynamic generation of JSPs), setting this to a high
+									value will improve performance a lot.</li>
+								<li><strong>trimSpaces</strong> - To remove useless bytes
+									from the response, set this to <code>true</code>.</li>
+							</ul>
+							<ul class="kor">
+								<li><strong>development</strong> - JSP 컴파일에 대한 접근 확인을 중단하기
+									위해서 이 값을 <code>false</code>로 바꾼다.</li>
+								<li><strong>genStringAsCharArray</strong> - 조금 더 효율적인 char
+									배열을 생성하기 위해서 이 값을 <code>true</code>로 바꾼다.</li>
+								<li><strong>modificationTestInterval</strong> - 어떤
+									이유에서든(JSP의 동적 생성과 같은), <strong>development</strong> 값이 <code>true</code>라면
+									이 값을 높게 설정 하는 것은 큰 성능 향상을 보일 것이다.</li>
+								<li><strong>trimSpaces</strong> - response로부터 불필요한 bytes를
+									제거하기 위해서 <code>true</code>로 바꾼다.</li>
+							</ul>
+
+						</div>
+						<h3 id="Web_Application_Compilation">Web Application
+							Compilation</h3>
+						<div class="text">
+
+							<p>Using Ant is the preferred way to compile web applications
+								using JSPC. Note that when pre-compiling JSPs, SMAP information
+								will only be included in the final classes if suppressSmap is
+								false and compile is true. Use the script given below (a similar
+								script is included in the "deployer" download) to precompile a
+								webapp:</p>
+							<p class="kor">
+								Ant를 사용하는 것은 JSPC를 사용하는 웹 어플리케이션을 컴파일하는데 선호되는 방법이다. JSP를 사전 컴파일
+								할 때, <strong>suppressSmap</strong>이 false, 컴파일이 true라면 SMAP 정보는
+								final 클래스에만 포함될 것이다. webapp를 사전 컴파일 하기 위해서 아래에 주어진 스크립트를
+								사용하자.(유사한 스크립트가 "deployer" download에 있다는데 여기가 어딜까)
+							</p>
+
+							<div class="codeBox">
+								<pre>
+									<code>&lt;project name="Webapp Precompilation" default="all" basedir="."&gt;
 
    &lt;import file="${tomcat.home}/bin/catalina-tasks.xml"/&gt;
 
@@ -482,105 +716,204 @@ bug 6294277</a>은 매우 큰 JSP를 컴파일 할 때                          
     &lt;/delete&gt;
   &lt;/target&gt;
 
-&lt;/project&gt;</code></pre></div>
+&lt;/project&gt;</code>
+								</pre>
+							</div>
 
-                            <p>
-                                The following command line can be used to run the script (replacing the tokens with the Tomcat base path and the path to the webapp which should be precompiled):
-                            </p>
-                            <p class="kor">
-                                다음의 명령줄은 스크립트를 실행하는데 사용될 수 있다.(토큰을 톰캣의 베이스 경로와 사전 컴파일 되어야 하는 webapp의 경로로 바꾸는 것)
-                            </p>
-                            <div class="codeBox"><pre><code>$ANT_HOME/bin/ant -Dtomcat.home=&lt;$TOMCAT_HOME&gt; -Dwebapp.path=&lt;$WEBAPP_PATH&gt;</code></pre></div>
+							<p>The following command line can be used to run the script
+								(replacing the tokens with the Tomcat base path and the path to
+								the webapp which should be precompiled):</p>
+							<p class="kor">다음의 명령줄은 스크립트를 실행하는데 사용될 수 있다.(토큰을 톰캣의 베이스 경로와
+								사전 컴파일 되어야 하는 webapp의 경로로 바꾸는 것)</p>
+							<div class="codeBox">
+								<pre>
+									<code>$ANT_HOME/bin/ant -Dtomcat.home=&lt;$TOMCAT_HOME&gt; -Dwebapp.path=&lt;$WEBAPP_PATH&gt;</code>
+								</pre>
+							</div>
 
 
-                            <p>
-                                Then, the declarations and mappings for the servlets which were generated during the precompilation must be added to the web application deployment descriptor. Insert the <code>${webapp.path}/WEB-INF/generated_web.xml</code>                                at the right place inside the <code>${webapp.path}/WEB-INF/web.xml</code> file. Restart the web application (using the manager) and test it to verify it is running fine with precompiled servlets. An appropriate token placed
-                                in the web application deployment descriptor may also be used to automatically insert the generated servlet declarations and mappings using Ant filtering capabilities. This is actually how all the webapps distributed with
-                                Tomcat are automatically compiled as part of the build process.
-                            </p>
-                            <p class="kor">
-                                이렇게 되면, 사전 컴파일 과정에서 생성되는 서블릿에 대한 선언과 매핑이 웹 어플리케이션 deployment descriptor(배포 서술자, DD)에 포함되어야 한다. <code>${webapp.path}/WEB-INF/generated_web.xml</code>을 <code>${webapp.path}/WEB-INF/web.xml</code>파일 내부의 올바른 위치에 삽입하라(manager을 이용해서). 웹 어플리케이션을 재시작하고, 사전 컴파일된 서블릿이 올바르게 동작하는지 확인하기 위해서 테스트 하라. 웹 어플리케이션 deployment descriptor에 적절하게 삽인된 토큰은 Ant filtering capabilities을 사용하여 생성된 서블릿 선언과 매핑을 자동적으로 삽입하는데 사용될 수 있다. 이것은 톰캣과 함께 배포된 모든 webapp가 어떻게 빌드 프로세스의 일부로서 자동적으로 컴파일되는지에 대한 내용이다.
-                            </p>
+							<p>
+								Then, the declarations and mappings for the servlets which were
+								generated during the precompilation must be added to the web
+								application deployment descriptor. Insert the
+								<code>${webapp.path}/WEB-INF/generated_web.xml</code>
+								at the right place inside the
+								<code>${webapp.path}/WEB-INF/web.xml</code>
+								file. Restart the web application (using the manager) and test
+								it to verify it is running fine with precompiled servlets. An
+								appropriate token placed in the web application deployment
+								descriptor may also be used to automatically insert the
+								generated servlet declarations and mappings using Ant filtering
+								capabilities. This is actually how all the webapps distributed
+								with Tomcat are automatically compiled as part of the build
+								process.
+							</p>
+							<p class="kor">
+								이렇게 되면, 사전 컴파일 과정에서 생성되는 서블릿에 대한 선언과 매핑이 웹 어플리케이션 deployment
+								descriptor(배포 서술자, DD)에 포함되어야 한다.
+								<code>${webapp.path}/WEB-INF/generated_web.xml</code>
+								을
+								<code>${webapp.path}/WEB-INF/web.xml</code>
+								파일 내부의 올바른 위치에 삽입하라(manager을 이용해서). 웹 어플리케이션을 재시작하고, 사전 컴파일된
+								서블릿이 올바르게 동작하는지 확인하기 위해서 테스트 하라. 웹 어플리케이션 deployment descriptor에
+								적절하게 삽인된 토큰은 Ant filtering capabilities을 사용하여 생성된 서블릿 선언과 매핑을
+								자동적으로 삽입하는데 사용될 수 있다. 이것은 톰캣과 함께 배포된 모든 webapp가 어떻게 빌드 프로세스의
+								일부로서 자동적으로 컴파일되는지에 대한 내용이다.
+							</p>
 
-                            <p>
-                                At the jasper task you can use the option <code>addWebXmlMappings</code> for automatic merge the <code>${webapp.path}/WEB-INF/generated_web.xml</code> with the current web application deployment descriptor at
-                                <code>${webapp.path}/WEB-INF/web.xml</code>. When you want to use Java 6 features inside your jsp's, add the following javac compiler task attributes:
-                                <code>source="1.6" target="1.6"</code>. For live applications you can also compile with <code>optimize="on"</code> and without debug info <code>debug="off"</code>.
-                            </p>
-                            <p class="kor">
-                                jasper task에서 <code>${webapp.path}/WEB-INF/generated_web.xml</code>과 <code>${webapp.path}/WEB-INF/web.xml</code>의 현재 웹 어플리케이션 deployment descriptor를 자동 병합하기 위해서<code>addWebXmlMappings</code> 옵션을 사용할 수 있다. jsp의 내부에 Java 6의 특징을 사용하고 싶다면, <code>source="1.6" target="1.6"</code> javac 컴파일러 task 속성을 추가하라. 실시간 어플리케이션을 위해서 <code>optimize="on"</code>로 컴파일 할 수 있고, 디버깅 정보를 없애는 <code>debug="off"</code>로 컴파일 할 수 있다.
-                            </p>
+							<p>
+								At the jasper task you can use the option
+								<code>addWebXmlMappings</code>
+								for automatic merge the
+								<code>${webapp.path}/WEB-INF/generated_web.xml</code>
+								with the current web application deployment descriptor at
+								<code>${webapp.path}/WEB-INF/web.xml</code>
+								. When you want to use Java 6 features inside your jsp's, add
+								the following javac compiler task attributes:
+								<code>source="1.6" target="1.6"</code>
+								. For live applications you can also compile with
+								<code>optimize="on"</code>
+								and without debug info
+								<code>debug="off"</code>
+								.
+							</p>
+							<p class="kor">
+								jasper task에서
+								<code>${webapp.path}/WEB-INF/generated_web.xml</code>
+								과
+								<code>${webapp.path}/WEB-INF/web.xml</code>
+								의 현재 웹 어플리케이션 deployment descriptor를 자동 병합하기 위해서
+								<code>addWebXmlMappings</code>
+								옵션을 사용할 수 있다. jsp의 내부에 Java 6의 특징을 사용하고 싶다면,
+								<code>source="1.6" target="1.6"</code>
+								javac 컴파일러 task 속성을 추가하라. 실시간 어플리케이션을 위해서
+								<code>optimize="on"</code>
+								로 컴파일 할 수 있고, 디버깅 정보를 없애는
+								<code>debug="off"</code>
+								로 컴파일 할 수 있다.
+							</p>
 
-                            <p>
-                                When you don't want to stop the jsp generation at first jsp syntax error, use
-                                <code>failOnError="false"</code>and with
-                                <code>showSuccess="true"</code> all successful <i>jsp to java</i> generation are printed out. Sometimes it is very helpful, when you cleanup the generate java source files at <code>${webapp.path}/WEB-INF/src</code> and
-                                the compile jsp servlet classes at
-                                <code>${webapp.path}/WEB-INF/classes/org/apache/jsp</code>.
-                            </p>
-                            <p class="kor">
-                                jsp 문법 에러가 처음 발생 시, jsp 생성을 멈추고 싶지 않다면 <code>failOnError="false"</code>와 모든 jsp to java생성이 출력되도록 <code>showSuccess="true"</code>를 사용하라. 이것은 때때로, <code>${webapp.path}/WEB-INF/src</code>의 generate 자바 소스 파일과 <code>${webapp.path}/WEB-INF/classes/org/apache/jsp</code>의 컴파일 jsp 서플릿 클래스를 정리할 때 매우 유용하다.
-                            </p>
+							<p>
+								When you don't want to stop the jsp generation at first jsp
+								syntax error, use
+								<code>failOnError="false"</code>
+								and with
+								<code>showSuccess="true"</code>
+								all successful <i>jsp to java</i> generation are printed out.
+								Sometimes it is very helpful, when you cleanup the generate java
+								source files at
+								<code>${webapp.path}/WEB-INF/src</code>
+								and the compile jsp servlet classes at
+								<code>${webapp.path}/WEB-INF/classes/org/apache/jsp</code>
+								.
+							</p>
+							<p class="kor">
+								jsp 문법 에러가 처음 발생 시, jsp 생성을 멈추고 싶지 않다면
+								<code>failOnError="false"</code>
+								와 모든 jsp to java생성이 출력되도록
+								<code>showSuccess="true"</code>
+								를 사용하라. 이것은 때때로,
+								<code>${webapp.path}/WEB-INF/src</code>
+								의 generate 자바 소스 파일과
+								<code>${webapp.path}/WEB-INF/classes/org/apache/jsp</code>
+								의 컴파일 jsp 서플릿 클래스를 정리할 때 매우 유용하다.
+							</p>
 
-                            <p><strong>Hints:</strong></p>
-                            <ul>
-                                <li> When you switch to another Tomcat release, then regenerate and recompile your jsp's with the new Tomcat version.</li>
-                                <li>Use java system property at server runtime to disable PageContext pooling
-                                    <code>org.apache.jasper.runtime.JspFactoryImpl.USE_POOL=false</code>. and limit the buffering with
-                                    <code>org.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true</code>. Note that changing from the defaults may affect performance, but it will vary depending on the application.</li>
-                            </ul>
-                            <ul class="kor">
-                                <li> 다른 톰캣 버전으로 전환할 때, jsp파일은 새로운 톰캣 버전으로 재생성, 재컴파일 된다.</li>
-                                <li> 서버 실행 중에 java 시스템 프로퍼티를 사용해서 <code>org.apache.jasper.runtime.JspFactoryImpl.USE_POOL=false</code>를 풀링하는 PageContext를 중단하라. 그리고 <code>org.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true</code>를 사용하여 버퍼링을 제한하라. 기본값과 다르게 변하는 것은 성능에 영향을 미치지만 이것은 어플리케이션에 달려있다.</li>
-                            </ul>
-                        </div>
-                        <h3 id="Optimisation">Optimisation</h3>
-                        <div class="text">
-                            <p>
-                                There are a number of extension points provided within Jasper that enable the user to optimise the behaviour for their environment.
-                            </p>
-                            <p class="kor">
-                                Jasper에는 사용자가 자신의 환경에 맞게 동작을 최적화 할 수 있는 많은 확장 요소가 제공되어 있다.
-                            </p>
+							<p>
+								<strong>Hints:</strong>
+							</p>
+							<ul>
+								<li>When you switch to another Tomcat release, then
+									regenerate and recompile your jsp's with the new Tomcat
+									version.</li>
+								<li>Use java system property at server runtime to disable
+									PageContext pooling <code>org.apache.jasper.runtime.JspFactoryImpl.USE_POOL=false</code>.
+									and limit the buffering with <code>org.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true</code>.
+									Note that changing from the defaults may affect performance,
+									but it will vary depending on the application.
+								</li>
+							</ul>
+							<ul class="kor">
+								<li>다른 톰캣 버전으로 전환할 때, jsp파일은 새로운 톰캣 버전으로 재생성, 재컴파일 된다.</li>
+								<li>서버 실행 중에 java 시스템 프로퍼티를 사용해서 <code>org.apache.jasper.runtime.JspFactoryImpl.USE_POOL=false</code>를
+									풀링하는 PageContext를 중단하라. 그리고 <code>org.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true</code>를
+									사용하여 버퍼링을 제한하라. 기본값과 다르게 변하는 것은 성능에 영향을 미치지만 이것은 어플리케이션에 달려있다.
+								</li>
+							</ul>
+						</div>
+						<h3 id="Optimisation">Optimisation</h3>
+						<div class="text">
+							<p>There are a number of extension points provided within
+								Jasper that enable the user to optimise the behaviour for their
+								environment.</p>
+							<p class="kor">Jasper에는 사용자가 자신의 환경에 맞게 동작을 최적화 할 수 있는 많은 확장
+								요소가 제공되어 있다.</p>
 
-                            <p>
-                                The first of these extension points is the tag plug-in mechanism. This allows alternative implementations of tag handlers to be provided for a web application to use. Tag plug-ins are registered via a <code>tagPlugins.xml</code>                                file located under <code>WEB-INF</code>. A sample plug-in for the JSTL is included with Jasper.
-                            </p>
-                            <p class="kor">
-                                첫 번째 확장 요소는 태그 플러그인 메커니즘이다. 이것은 사용할 웹 어플리케이션에 대해서 태그 핸들러의 대체 구현이 제공되는 것을 허용한다. 태그 플러그인은 <code>WEB-INF</code> 하위의 <code>tagPlugins.xml</code> 파일을 통해서 등록되어 있다. JSTL을 위한 플러그인 예제는 Jasper에 포함되어 있다.
-                            </p>
+							<p>
+								The first of these extension points is the tag plug-in
+								mechanism. This allows alternative implementations of tag
+								handlers to be provided for a web application to use. Tag
+								plug-ins are registered via a
+								<code>tagPlugins.xml</code>
+								file located under
+								<code>WEB-INF</code>
+								. A sample plug-in for the JSTL is included with Jasper.
+							</p>
+							<p class="kor">
+								첫 번째 확장 요소는 태그 플러그인 메커니즘이다. 이것은 사용할 웹 어플리케이션에 대해서 태그 핸들러의 대체 구현이
+								제공되는 것을 허용한다. 태그 플러그인은
+								<code>WEB-INF</code>
+								하위의
+								<code>tagPlugins.xml</code>
+								파일을 통해서 등록되어 있다. JSTL을 위한 플러그인 예제는 Jasper에 포함되어 있다.
+							</p>
 
-                            <p>
-                                The second extension point is the Expression Language interpreter. Alternative interpreters may be configured through the <code>ServletContext</code>. See the
-                                <code>ELInterpreterFactory</code> javadoc for details of how to configure an alternative EL interpreter.
-                            </p>
-                            <p class="kor">
-                                두 번째 확장 요소는 Expression Language interpreter이다. 대체 인터프리터는 <code>ServletContext</code>를 통해서 구성될 수 있다. 대체 EL 인터프리터를 어떻게 구성하는지 자세한 내용을 찾기 위해서 <code>ELInterpreterFactory</code>의 javadoc을 찾아 보아라.
-                            </p>
-                        </div>
-                        <div class="noprint">
-                            <h3 id="comments_section">
-                  Comments
-                </h3>
-                            <div class="text">
-                                <p class="notice"><strong>Notice: </strong>This comments section collects your suggestions on improving documentation for Apache Tomcat.<br><br> If you have trouble and need help, read
-                                    <a href="http://tomcat.apache.org/findhelp.html">Find Help</a> page and ask your question on the tomcat-users
-                                    <a href="http://tomcat.apache.org/lists.html">mailing list</a>. Do not ask such questions here. This is not a Q&amp;A section.<br><br> The Apache Comments System is explained <a href="./comments.html">here</a>. Comments
-                                    may be removed by our moderators if they are either implemented or considered invalid/off-topic.
-                                </p>
-                                <div id="comments_thread"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div id="footer">
-                Copyright &copy; 1999-2017, The Apache Software Foundation
-            </div>
-        </footer>
-    </div>
+							<p>
+								The second extension point is the Expression Language
+								interpreter. Alternative interpreters may be configured through
+								the
+								<code>ServletContext</code>
+								. See the
+								<code>ELInterpreterFactory</code>
+								javadoc for details of how to configure an alternative EL
+								interpreter.
+							</p>
+							<p class="kor">
+								두 번째 확장 요소는 Expression Language interpreter이다. 대체 인터프리터는
+								<code>ServletContext</code>
+								를 통해서 구성될 수 있다. 대체 EL 인터프리터를 어떻게 구성하는지 자세한 내용을 찾기 위해서
+								<code>ELInterpreterFactory</code>
+								의 javadoc을 찾아 보아라.
+							</p>
+						</div>
+						<div class="noprint">
+							<h3 id="comments_section">Comments</h3>
+							<div class="text">
+								<p class="notice">
+									<strong>Notice: </strong>This comments section collects your
+									suggestions on improving documentation for Apache Tomcat.<br>
+									<br> If you have trouble and need help, read <a
+										href="http://tomcat.apache.org/findhelp.html">Find Help</a>
+									page and ask your question on the tomcat-users <a
+										href="http://tomcat.apache.org/lists.html">mailing list</a>.
+									Do not ask such questions here. This is not a Q&amp;A section.<br>
+									<br> The Apache Comments System is explained <a
+										href="./comments.html">here</a>. Comments may be removed by
+									our moderators if they are either implemented or considered
+									invalid/off-topic.
+								</p>
+								<div id="comments_thread"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div id="footer">Copyright &copy; 1999-2017, The Apache
+				Software Foundation</div>
+		</footer>
+	</div>
 </body>
 
 </html>
