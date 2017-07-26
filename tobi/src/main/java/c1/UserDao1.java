@@ -11,9 +11,6 @@ public class UserDao1 {
 		
 		Class.forName("org.mariadb.jdbc.Driver");
 		Connection c = DriverManager.getConnection(
-				"jdbc:mariadb://192.168.35.155:3306/eng_db",
-				"eng",
-				"1234"
 				);
 		PreparedStatement ps = c.prepareStatement(
 				"select word from words"
