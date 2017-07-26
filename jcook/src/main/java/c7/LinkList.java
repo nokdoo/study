@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class LinkList<T> implements List<T> {
+public abstract class LinkList<T> implements List<T> {
 	/* A TNode stores one node or item in a Linked List */
 	private static class TNode<T> {
 		TNode<T> next;
