@@ -1,8 +1,6 @@
-리눅스나 솔라리스처럼 매우 효율 적인 성능을 제공하는 single address space를 가지고 있는 os는
-잘 짜여져 있는 하나의 구조를 가진다.
-이들은 또한 새로운 기능을 커널에 동적으로 추가할 수 있는 특징을 가진다.
+리눅스나 솔라리스처럼 매우 효율 적인 성능을 제공하는 single address space를 가지고 있는 os는 잘 짜여져 있는 하나의 구조를 가진다. 이들은 또한 새로운 기능을 커널에 동적으로 추가할 수 있는 특징을 가진다.
 
-윈도우즈도 마찬가지로 monolithic이지만, 
+윈도우즈도 마찬가지로 monolithic이지만,
 	유저 프로세스로로 실행되는 subsystem에 대한 지원을 포함하는 microkernel system의 특성을 가지고 있다.
 
 Mac OS X
@@ -22,5 +20,3 @@ iOS
 Android
 	안드로이드도 iOS와 유사하게 application 개발을 위한 프레임워크를 제공하는 layered stack을 이루고 있다.
 	생략
-		
-	
