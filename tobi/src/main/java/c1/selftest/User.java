@@ -1,6 +1,6 @@
-package c1;
+package c1.selftest;
 
-public class User1 {
+public class User {
 	String word;
 
 	public String getWord() {

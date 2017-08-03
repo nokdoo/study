@@ -3,7 +3,7 @@ package c1;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Ext_UserDao2 extends UserDao2 {
+public class Ext_UserDao2 extends UserDao {
 
 	@Override
 	java.sql.Connection Connection() throws SQLException, ClassNotFoundException {

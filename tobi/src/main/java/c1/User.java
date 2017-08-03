@@ -1,6 +1,6 @@
 package c1;
 
-public class User2 {
+public class User {
 	String word;
 
 	public String getWord() {

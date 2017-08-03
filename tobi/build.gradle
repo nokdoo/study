@@ -28,6 +28,24 @@ dependencies {
     
     // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
 	compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.0.3'
+	
+	// https://mvnrepository.com/artifact/org.springframework/spring-core
+	compile group: 'org.springframework', name: 'spring-core', version: '4.3.10.RELEASE'
+	compile group: 'org.springframework', name: 'spring-context', version: '4.3.10.RELEASE'
+	// https://mvnrepository.com/artifact/org.springframework/spring-asm
+	compile group: 'org.springframework', name: 'spring-asm', version: '3.1.4.Release'
+
+	compile group: 'org.springframework', name: 'spring-beans', version: '4.3.10.RELEASE'
+	compile group: 'org.springframework', name: 'spring-expression', version: '4.3.10.RELEASE'
+	
+	// https://mvnrepository.com/artifact/commons-logging/commons-logging
+	compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+	
+	// https://mvnrepository.com/artifact/net.sourceforge.cglib/com.springsource.net.sf.cglib
+	compile group: 'net.sourceforge.cglib', name: 'com.springsource.net.sf.cglib', version: '2.2.0'
+	
+	
+	
     
 }
 

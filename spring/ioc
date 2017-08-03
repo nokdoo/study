@@ -1,0 +1,24 @@
+#BeanFactory 			- 	스프링의 IoC를 담당하는 컨테이너. 빈 등록, 생성, 조회
+#Bean 					- 	스프링이 IoC로 관리하는 오브젝트
+#ApplicationContext 	- 	BeanFactory를 상속, 확장한 컨테이너. 스프링이 지원하는 기능을 추가할 수 있다.
+#configuration metadata - 	BeanFactory 또는 ApplicationContext가 IoC를 적용하기 위해 사용하는 메타정보.
+#Container				-	Bean을 관리.
+
+
+//오브젝트 설정을 담당하는 클래스로 인식
+@Configuration
+BeanFactory Class {
+
+	
+	//스프링이 IoC로 관리하는 오브젝트
+	//스프링이 직접 오브젝트를 생성, 초기화, 제어
+	@Bean
+	Method()
+}
+
+
+//사용
+Application context = new AnnotationConfigApplicationContext(BeanFactory.class);
+
+//@Bean이 생성하는 Object-Type
+Object-Type var = context.getBean("Method", Object-Type.class);
