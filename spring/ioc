@@ -1,4 +1,4 @@
-#BeanFactory 			- 	스프링의 IoC를 담당하는 컨테이너. 빈 등록, 생성, 조회
+#BeanFactory 			- 	스프링의 IoC를 담당하는 컨테이너. 빈 등록, 생성, 조회. DI컨테이너라고도 함.
 #Bean 					- 	스프링이 IoC로 관리하는 오브젝트
 #ApplicationContext 	- 	BeanFactory를 상속, 확장한 컨테이너. 스프링이 지원하는 기능을 추가할 수 있다.
 #configuration metadata - 	BeanFactory 또는 ApplicationContext가 IoC를 적용하기 위해 사용하는 메타정보.
