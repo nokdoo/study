@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+ -->
+
+
+	<!-- 
+		id : 메서드 이름 
+		class : 주입할 실제 클래스 경로+이름 
+		
+			property : 의존관계 주입 속성
+			name : 메서드 이름 
+			ref : 주입될 빈의 이름 
+	 -->
+	 
+	<bean id="connectionMaker" class="c1.xml.DConnectionMaker"/>
+	<bean id="userDao" class="c1.xml.UserDao">
+		<constructor-arg ref="connectionMaker"/>
+		<!-- <property name="connectionMaker" ref="connectionMaker"/> -->
+	</bean>
+
+</beans>

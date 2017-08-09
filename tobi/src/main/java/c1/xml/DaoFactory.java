@@ -1,4 +1,4 @@
-package c1.selftest;
+	package c1.xml;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +9,13 @@ public class DaoFactory {
 	public ConnectionMaker connectionMaker(){
 		return new DConnectionMaker();
 	}
+	
+	/*@Bean
+	public UserDao userDao(){
+		UserDao userDao = new UserDao();
+		userDao.setConnectionMaker(connectionMaker());
+		return userDao;
+	}*/
 	
 	@Bean
 	public UserDao userDao(){
