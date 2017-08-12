@@ -44,6 +44,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/net.sourceforge.cglib/com.springsource.net.sf.cglib
 	compile group: 'net.sourceforge.cglib', name: 'com.springsource.net.sf.cglib', version: '2.2.0'
 	
+	// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+	compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.10.RELEASE'
 	
 	
     
