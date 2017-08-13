@@ -1,0 +1,42 @@
+#c - 명령어(command)
+#n - 이름(name)
+#sc - 소스 코드(source code)
+
+#c gradle tasks
+	실행가능한 task를 보여준다.
+
+#n task
+	gradle에 정의되어 있는 method라 보자.
+
+#c gradle wrapper 명령어
+	gradle이 설치되어 있지 않아도 사용자가 gradle task를 실행할 수 있게하는 small script, supporting jar, properties file을 생성한다.
+	이들은 생성된 버전과 동일한 버전으로 사용이 가능하다.
+	small srcipt는 gradlew, gradlew.bat이며 각각 unix script, windows command이다.
+	나버지 파일은 gradle -> wrapper 디렉토리에 생성된다.
+	 
+#c gradle help --task wrapper
+	 gradle wrapper의 상세 task 정보를 확인한다.
+
+#c ./gradlew <task>
+	생성된 gradlew의 task를 실행한다.
+	./gradlew tasks --all => gradlew에 정의되어 있는 task를 모두 보여준다.
+		./gradlew tasks 에서는 보이지 않던 사용자가 정의한 task도 보여준다.
+		(gradle tasks -all 생각) => gradle과 ./gradlew명령어는 각각 build.gradle, gradlew파일을 참조한다고 보면 될듯.
+#c ./gradlew properties
+	properties task를 실행한다. => 프로젝트의 속성을 보여준다.
+	ex)
+		name - 프로젝트의 이름은 default 폴더와 일치한다.
+		group, version, descrption은 프로젝트의 정보이며, 각각은 기본값이 비어있다.
+		buildFile - build.gradle의 절대경로
+		buildDir - build.gradle이 있는 위치의 하위 디렉토리
+
+#sc plugins{ ... }
+	한상 맨 위에 작성되어 있어야 하며, 플러그인을 추가한다. 모듈을 추가한다고 생각하면 될듯.
+	{ ... } - ex) id 'base' -> base plugin을 추가한다.
+
+#n gradle-daemon
+	gradle의 실행속도를 빠르게 해주는 백그라운드 프로세스
+	공식적으로 항상 켜놓는것을 권장한다. (기본옵션으로 켜져있음)
+	자세한 내용은 https://docs.gradle.org/current/userguide/gradle_daemon.html 참조
+	jvm의 기본 최소힙 크기인 1GB를 사용한다.
+
