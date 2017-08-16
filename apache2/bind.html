@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <!--
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
               This file is generated from xml source: DO NOT EDIT
@@ -25,10 +23,10 @@
 <div class="toplang">
 <p><span>Available Languages: </span><a href="./de/bind.html" hreflang="de" rel="alternate" title="Deutsch">&nbsp;de&nbsp;</a> |
 <a href="./en/bind.html" title="English">&nbsp;en&nbsp;</a> |
-<a href="./fr/bind.html" hreflang="fr" rel="alternate" title="Fran�ais">&nbsp;fr&nbsp;</a> |
+<a href="./fr/bind.html" hreflang="fr" rel="alternate" title="Fran�ais">&nbsp;fr&nbsp;</a> |
 <a href="./ja/bind.html" hreflang="ja" rel="alternate" title="Japanese">&nbsp;ja&nbsp;</a> |
 <a href="./ko/bind.html" hreflang="ko" rel="alternate" title="Korean">&nbsp;ko&nbsp;</a> |
-<a href="./tr/bind.html" hreflang="tr" rel="alternate" title="T�rk�e">&nbsp;tr&nbsp;</a></p>
+<a href="./tr/bind.html" hreflang="tr" rel="alternate" title="T�rk�e">&nbsp;tr&nbsp;</a></p>
 </div>
 
     <p>Configuring Apache HTTP Server to listen on specific addresses and ports.</p>
@@ -41,7 +39,7 @@
 <div class="top"><a href="#page-header"><img alt="top" src="./images/up.gif" /></a></div>
 <div class="section">
 <h2><a name="overview" id="overview">Overview</a></h2>
-    
+
 
     <table class="related"><tr><th>Related Modules</th><th>Related Directives</th></tr><tr><td><ul><li><code class="module"><a href="./mod/core.html">core</a></code></li><li><code class="module"><a href="./mod/mpm_common.html">mpm_common</a></code></li></ul></td><td><ul><li><code class="directive"><a href="./mod/core.html#virtualhost">&lt;VirtualHost&gt;</a></code></li><li><code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code></li></ul></td></tr></table>
 
@@ -55,6 +53,8 @@
     <code>httpd</code> responds to different IP addresses, hostnames and
     ports.</p>
 
+    <p class="kor">htpd는 시작할 때, 로컬 머신의 아이피와 포트를 묶고 요청을 기다린다. 기본적으로 httpd는 머신의 모든 주소를 주시한다. 하지만 특정 포트만 또는 선택된 아이피만 아니면 둘 다를  주시할 필요가 있을 수 있다. 이것은 종종 <a href="vhosts/">Virtual Host</a>의 특징과 결합되어 htppd가 다른 아이피, 호스트, 포트에 어떻게 응답할지 결정한다.</p>
+
     <p>The <code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code>
     directive tells the server to accept
     incoming requests only on the specified port(s) or
@@ -66,6 +66,8 @@
     specify a number of addresses and ports to listen on. The
     server will respond to requests from any of the listed
     addresses and ports.</p>
+
+    <p class="kor"><code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code> 지시어는 서버에게 명시된 포트 또는 아이피-포트에서의 요청만 수용하도록 한다. <code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code>에 포트 번호마나 명시되어 있다면 서버는 모든 인터페이스의 포트를 주시한다. 포트와 함께 아이피가 명시되었다면 서버는 주어진 인터페이스와 포트를 주시할 것이다. 다중 <code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code>은 여러 개의 포트와 아이피를 명시하기 위해서 사용될 수 있다. 서버는 아피이와 포트 목록의 요청으로부터 응답할 것이다.</p>
 
     <p>For example, to make the server accept connections on both
     port 80 and port 8000, on all interfaces, use:</p>
@@ -102,7 +104,7 @@ Listen 192.0.2.5:8000</pre>
   </div><div class="top"><a href="#page-header"><img alt="top" src="./images/up.gif" /></a></div>
 <div class="section">
 <h2><a name="ipv6" id="ipv6">Special IPv6 Considerations</a></h2>
-    
+
 
     <p>A growing number of platforms implement IPv6, and
     <a class="glossarylink" href="./glossary.html#apr" title="see glossary">APR</a> supports IPv6 on most of these platforms,
@@ -145,7 +147,7 @@ Listen 192.0.2.1:80</pre>
   </div><div class="top"><a href="#page-header"><img alt="top" src="./images/up.gif" /></a></div>
 <div class="section">
 <h2><a name="protocol" id="protocol">Specifying the protocol with Listen</a></h2>
-    
+
     <p>The optional second <var>protocol</var> argument of
        <code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code>
        is not required for most
@@ -163,7 +165,7 @@ Listen 192.0.2.1:80</pre>
   </div><div class="top"><a href="#page-header"><img alt="top" src="./images/up.gif" /></a></div>
 <div class="section">
 <h2><a name="virtualhost" id="virtualhost">How This Works With Virtual Hosts</a></h2>
-    
+
 
     <p> The <code class="directive"><a href="./mod/mpm_common.html#listen">Listen</a></code> directive does not implement
     Virtual Hosts - it only tells the
@@ -186,10 +188,10 @@ Listen 192.0.2.1:80</pre>
 <div class="bottomlang">
 <p><span>Available Languages: </span><a href="./de/bind.html" hreflang="de" rel="alternate" title="Deutsch">&nbsp;de&nbsp;</a> |
 <a href="./en/bind.html" title="English">&nbsp;en&nbsp;</a> |
-<a href="./fr/bind.html" hreflang="fr" rel="alternate" title="Fran�ais">&nbsp;fr&nbsp;</a> |
+<a href="./fr/bind.html" hreflang="fr" rel="alternate" title="Fran�ais">&nbsp;fr&nbsp;</a> |
 <a href="./ja/bind.html" hreflang="ja" rel="alternate" title="Japanese">&nbsp;ja&nbsp;</a> |
 <a href="./ko/bind.html" hreflang="ko" rel="alternate" title="Korean">&nbsp;ko&nbsp;</a> |
-<a href="./tr/bind.html" hreflang="tr" rel="alternate" title="T�rk�e">&nbsp;tr&nbsp;</a></p>
+<a href="./tr/bind.html" hreflang="tr" rel="alternate" title="T�rk�e">&nbsp;tr&nbsp;</a></p>
 </div><div class="top"><a href="#page-header"><img src="./images/up.gif" alt="top" /></a></div><div class="section"><h2><a id="comments_section" name="comments_section">Comments</a></h2><div class="warning"><strong>Notice:</strong><br />This is not a Q&amp;A section. Comments placed here should be pointed towards suggestions on improving the documentation or server, and may be removed again by our moderators if they are either implemented or considered invalid/off-topic. Questions on how to manage the Apache HTTP Server should be directed at either our IRC channel, #httpd, on Freenode, or sent to our <a href="http://httpd.apache.org/lists.html">mailing lists</a>.</div>
 <script type="text/javascript"><!--//--><![CDATA[//><!--
 var comments_shortname = 'httpd';
@@ -203,7 +205,7 @@ var comments_identifier = 'http://httpd.apache.org/docs/2.4/bind.html';
         s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
         (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
     }
-    else { 
+    else {
         d.write('<div id="comments_thread">Comments are disabled for this page at the moment.<\/div>');
     }
 })(window, document);
