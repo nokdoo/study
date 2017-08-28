@@ -1,10 +1,10 @@
 #!/usr/bin/perl -w
 use strict;
 
-$_ = "한글이에요";
+$_ = "A한글이에요";
 
-print "가\x11*16*16+\xAB";
+print \0xec;
 
-if(/(\x11AB)/){
+if(/\0x88/){
 	print "passed\n";
 }
