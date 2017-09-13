@@ -1,10 +1,12 @@
-//Contiguos-memory(stack) + MergeSort
+/*
+	Contiguos-memory(stack) 
+	+
+	BinarySearch
+*/
+
 
 #include <stdio.h>
 #include <stdlib.h>
-
-//3.5에서 48의 스택공간이 필요함
-#define max_length 50
 
 typedef enum {false, true} boolean;
 
@@ -54,7 +56,7 @@ void Push(int x, stack *L){
 
 }
 
-void print35(stack *L){
+void print36(stack *L){
 	int i;
 	for(i=0; i<L->length; i++){
 		printf("%d", L->info[i]);
