@@ -13,7 +13,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.transaction.TransactionFactory;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 
-public class MyBatisJavaConfClient {
+public class Main {
 
     private static SqlSessionFactory sesFact = null;
 

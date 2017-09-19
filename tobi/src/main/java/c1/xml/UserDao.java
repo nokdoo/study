@@ -17,10 +17,8 @@ public class UserDao implements ConnectionMaker{
 	}
 	
 	public void get() throws ClassNotFoundException, SQLException{
-		
-		
 		Connection c = con.Connection();
-		
+
 		PreparedStatement ps = c.prepareStatement(
 				"select word from words"
 				);

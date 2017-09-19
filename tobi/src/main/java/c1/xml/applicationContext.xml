@@ -23,7 +23,7 @@
 	 
 	<bean id="connectionMaker" class="c1.xml.DConnectionMaker"/>
 	<bean id="userDao" class="c1.xml.UserDao">
-		<!-- 주입받는 빈은 기본 생성자를 추가해주어야 하는데(추가하지 않으면 에러발생), 이것을 무시하는 태  -->
+		<!-- 주입받는 빈은 기본 생성자를 추가해주어야 하는데(추가하지 않으면 에러발생)함 -> 생성자 추가하는 태그를 추가함  -->
 		 <constructor-arg ref="connectionMaker"/>
 		<!-- <property name="connectionMaker" ref="connectionMaker"/> -->
 	</bean>

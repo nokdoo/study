@@ -20,10 +20,15 @@
 			name : 메서드 이름 
 			ref : 주입될 빈의 이름 
 	 -->
-	 
-	<bean id="connectionMaker" class="c1.xml.DConnectionMaker"/>
+	<bean id="mariaDBProperties" class="java.util.Properties">
+		<property name="driver" value="org.mariadb.jdbc.Driver"/>
+		<property name="url" value="jdbc:mariadb://192.168.35.155:3306/eng_db"/>
+		<property name="user" value="eng"/>
+		<property name="password" value="1234"/>
+	</bean>
+	<bean id="myDataSourceFactory" class="base.MyDataSourceFactory"/>
 	<bean id="userDao" class="c1.xml.UserDao">
-		<!-- 주입받는 빈은 기본 생성자를 추가해주어야 하는데(추가하지 않으면 에러발생), 이것을 무시하는 태  -->
+		<!-- 주입받는 빈은 기본 생성자를 추가해주어야 하는데(추가하지 않으면 에러발생)함 -> 생성자 추가하는 태그를 추가함  -->
 		 <constructor-arg ref="connectionMaker"/>
 		<!-- <property name="connectionMaker" ref="connectionMaker"/> -->
 	</bean>
