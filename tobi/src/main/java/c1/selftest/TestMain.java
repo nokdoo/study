@@ -11,6 +11,7 @@ public class TestMain {
 		ApplicationContext contect 
 		= new AnnotationConfigApplicationContext(DaoFactory.class);
 		UserDao dao = contect.getBean("userDao", UserDao.class);
+		
 		dao.get();
 		
 		String a = "abc";

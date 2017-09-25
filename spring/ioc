@@ -17,8 +17,8 @@ BeanFactory Class {
 }
 
 
-//사용
+//어플리케이션 컨텍스트 사용
 Application context = new AnnotationConfigApplicationContext(BeanFactory.class);
 
 //@Bean이 생성하는 Object-Type
-Object-Type var = context.getBean("Method", Object-Type.class);
+Object-Type var = context.getBean("method", Object-Type.class);
