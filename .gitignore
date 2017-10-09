@@ -5,3 +5,5 @@ RemoteSystemsTempFiles/
 *.class
 .project
 .classpath
+
+!c/*.out
