@@ -5,6 +5,6 @@ RemoteSystemsTempFiles/
 *.class
 .project
 .classpath
-.swp
+*.swp
 
 !c/*.out
