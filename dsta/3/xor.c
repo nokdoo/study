@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "../../c/print.h"
+
 struct Node{
 	int data;
 	struct Node* XORaddr;
@@ -40,9 +42,10 @@ void printxor(struct Node *head){
 
 int main(){
 	struct Node *head = NULL;
-	insertNode(&head, 1);
-	insertNode(&head, 2);
-	insertNode(&head, 3);
-	insertNode(&head, 4);
+	insertNode(&head, 10);
+	insertNode(&head, 123);
+	insertNode(&head, 23432);
+	insertNode(&head, 3434);
+	insertNode(&head, 343434);
 	printxor(head);
 }
