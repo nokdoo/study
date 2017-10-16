@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+use strict;
+
+$_ = "hello there, neighbor";
+my ($first, $second, $third) = /(\S+) (\S+) (\S+)/;
+print "$second is my $third\n";

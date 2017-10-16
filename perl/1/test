@@ -1,2 +1,8 @@
 #!/usr/bin/perl
-print "Hello, world!\n";
+
+@fred = qw(eating rocks is wrong);
+$fred = "right";
+print "$fred[3]\n";
+print "${fred}[3]\n";
+print "this is $fred"."[3]\n";
+print "this is $fred\[3]\n";

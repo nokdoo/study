@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my $what = '(?<name>wil) asd';
+my $name;
+while (<>) {
+	chomp;
+
+	if (/$what/) {
+		print "Matched: |$`<$&>$'|\n";
+		print "$+{name}\n";
+	} else {
+		print "No match.\n";
+	}
+
+}
+

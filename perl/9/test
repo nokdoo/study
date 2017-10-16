@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+use strict;
+
+$_ = "I saw Bar with Fred";
+s/(\w+) with (\w+)/\U$2\E:
+
+print $_;

@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+
+@arr = qw(asd xcv ert ghj);
+@arr = reverse @arr;
+$abc = reverse @arr;
+print $abc;

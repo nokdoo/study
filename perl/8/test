@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+use strict;
+
+$_ = "hello haha, hodor";
+if(/(\w+\S) (\w+\S), (\w+$)/){
+	print "$1 $2 $3\n";
+}
+
+$_ = "hellod dff";
+if(/(\w+\S) (\w+\S), (\w+$)/){
+}
+	print "$1 $2 $3\n";
