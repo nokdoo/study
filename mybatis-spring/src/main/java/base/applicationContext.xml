@@ -22,8 +22,8 @@
 	 -->
 	<bean id="mariaDBProperties" class="java.util.Properties">
 		<property name="driver" value="org.mariadb.jdbc.Driver"/>
-		<property name="url" value="jdbc:mariadb://192.168.35.155:3306/eng_db"/>
-		<property name="user" value="eng"/>
+		<property name="url" value="jdbc:mariadb://192.168.35.155:3306/eng"/>
+		<property name="user" value="english"/>
 		<property name="password" value="1234"/>
 	</bean>
 	<bean id="myDataSourceFactory" class="base.MyDataSourceFactory"/>
