@@ -34,3 +34,9 @@ git clone github.com/계정/repo를 하면 현재 폴더에 repo가 생성된다
 git fetch를 통해 repo의 최신정보를 가져온다
 사용한다. 
 ----브랜치 사용법도 필요하겠네..
+
+#깃 허브로 직접 마스터 브런치에 파일을 업로드 하고 각 로컬에 반영할 때.
+로컬에서
+git fetch origin
+git pull origin
+
