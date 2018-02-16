@@ -31,18 +31,20 @@ void dCKA(char K, struct node* P, struct node** Q, int* d){
 	}
 }
 
-void Rotate(struct node* P, int d){
-	struct node* tmp = P;
-	struct node* PR = P->right;
-	struct node* PL = P->left;
+void Rotate(struct node** P, int d){
+	struct node** tmp = P;
+	struct node* PR = (*P)->right;
+	struct node* PL = (*P)->left;
 	if(d == -1){
-		P = tmp->right;
-		tmp->right = PR->left;
-		PR->left = tmp;
+		//P = tmp->right;
+		*P = (*P)->right;
+		(*tmp)->right = PR->left;
+		PR->left = *tmp;
 	}else{
-		P = tmp->left;
-		tmp->left = PL->right;
-		PL->right = tmp;
+		//P = tmp->left;
+		*P = (*P)->left;
+		(*tmp)->left = PL->right;
+		PL->right = *tmp;
 	}
 }
 
@@ -84,37 +86,38 @@ void AVLTreeInsert(char K, struct node** T){
 		}
 		if(flag == 1) break;
 	}
-
-	//if(P != NULL && K == P->key){
-	if(K == P->key){
-		return;
-	}
-
+	printf("%c", K);
 	if(!CritNodeFound){
+		printf(":%c -- CritNodeFound\n", K);
 		R = *T;
 	}else{
 		dCKA(K, A, &C, &d1);
 		if(A->balance != d1){
+			printf(":%c -- A->balance != d1\n", K);
 			A->balance = 0;
 			R = P;
 		}else{
 			dCKA(K, C, &B, &d2);
 			if(d2 == d1){
+				printf(":%c -- d2 == d1\n", K);
 				A->balance = 0;
 				R = B;
-				Rotate(A, -d1);
+				Rotate(&A, -d1);
 			}else{
 				dCKA(K, B, &R, &d3);
 				if(d3 == d2){
+					printf(":%c -- d3 == d2\n", K);
 					A->balance = 0;
 					C->balance = d1;
 				}else if(d3 == -d2){
+					printf(":%c -- d3 == -d2\n", K);
 					A->balance = d2;
 				}else{
+					printf(":%c -- else\n", K);
 					A->balance = 0;
 				}
-				Rotate(C, -d2);
-				Rotate(A, -d1);
+				Rotate(&C, -d2);
+				Rotate(&A, -d1);
 			}
 		}
 	}
@@ -156,5 +159,5 @@ int main(){
 	AVLTreeInsert('H', &tree);
 	AVLTreeInsert('I', &tree);
 	AVLTreeInsert('A', &tree);
-	InorderPrint(tree);
+	//InorderPrint(tree);
 }
