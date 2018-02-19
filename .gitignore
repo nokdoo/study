@@ -6,5 +6,6 @@ RemoteSystemsTempFiles/
 .project
 .classpath
 *.swp
+tags
 
 !c/*.out
