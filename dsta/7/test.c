@@ -16,16 +16,12 @@ struct trace{
 	struct node *node;
 };
 
-struct node *test = NULL;
-
 struct node* NewNode(char newkey){
 	struct node* new_node = (struct node*) malloc(sizeof(struct node));
 	new_node->key = newkey;
 	new_node->balance = 0;
 	new_node->left = NULL;
 	new_node->right = NULL;
-	if(newkey == 'R')
-		test = new_node;
 	return new_node;
 }
 
@@ -159,23 +155,20 @@ int hasTwoChild(struct node *P){
 	return FALSE;
 }
 
-struct node* InorderSuccessor(struct node **T, struct node *P){
-	struct node *tmp = *T;
+struct node *InorderSuccessor(struct node *P){
+	struct node *tmp = P;
 	int FindFlag = FALSE;
 	int LeftBreak = FALSE;
-	struct node *stack[10];
+	struct node (*stack)[10];
 	int idx = -1;
-
-	while(tmp != NULL){
-		printf("%c  ", tmp->key);
-		if(FindFlag == TRUE){
+	
+	while(tmp != NULL && idx != -1){
+		if(FindFlag == TRUE)
 			return tmp;
-		}
 
 		if(LeftBreak == FALSE){
 			if(tmp->left == NULL){
-				LeftBreak = TRUE;
-				tmp = stack[idx--];
+				LeftBreak == TRUE;
 			}else{
 				stack[++idx] = tmp;
 				tmp = tmp->left;
@@ -183,18 +176,14 @@ struct node* InorderSuccessor(struct node **T, struct node *P){
 			continue;
 		}
 
-		if(tmp->key == P->key){
+		if(tmp == P){
 			FindFlag = TRUE;
 		}
 
 		if(tmp->right != NULL){
 			tmp = tmp->right;
-			LeftBreak = FALSE;
-		}else{
-			if(idx == -1) return NULL;
-			tmp = stack[idx--];
+			LeftBreak == FALSE;
 		}
-		
 	}
 }
 
@@ -223,7 +212,7 @@ void AVLTreeDelete(char K, struct node **T){
 	int direct = stack[idx--].direct;
 
 	if(isLeaf(P)){
-		Parent->balance -= direct;
+		Parent->balance -= Parent.direct;
 		if(direct == 1){
 			Parent->right = NULL;
 		}else{
@@ -233,17 +222,15 @@ void AVLTreeDelete(char K, struct node **T){
 		return;
 	}else{
 		if(hasTwoChild(P)){
-			struct node *is = InorderSuccessor(T, P);
-			//여기
+			
 		}else{ // hasOneChild
-			if(direct == 1){
-				Parent->right = (P->right == NULL) ? P->left : P->right;
-			}else{
-				Parent->left = (P->right == NULL) ? P->left : P->right;
-			}
-			free(P);
+			struct node *is = InorderSuccessor(P);
 		}
 	}
+
+	
+
+
 }
 
 void InorderPrint(struct node *root){
@@ -279,20 +266,14 @@ int main(){
 	AVLTreeInsert('P', &tree);
 	AVLTreeInsert('V', &tree);
 	AVLTreeInsert('M', &tree);
-	struct node *tmp = InorderSuccessor(&tree, test);
-	if(tmp == NULL){
-		printf("NULL\n");
-	}else{
-		printf("%c  ", tmp->key);
-	}
-//	AVLTreeDelete('B', &tree);
-//	AVLTreeInsert('B', &tree);
-//	AVLTreeDelete('F', &tree);
-//	AVLTreeInsert('F', &tree);
-//	AVLTreeDelete('M', &tree);
-//	AVLTreeInsert('M', &tree);
-//	AVLTreeDelete('R', &tree);
-//	AVLTreeInsert('R', &tree);
+	AVLTreeDelete('B', &tree);
+	AVLTreeInsert('B', &tree);
+	AVLTreeDelete('F', &tree);
+	AVLTreeInsert('F', &tree);
+	AVLTreeDelete('M', &tree);
+	AVLTreeInsert('M', &tree);
+	AVLTreeDelete('R', &tree);
+	AVLTreeInsert('R', &tree);
 
 	InorderPrint(tree);
 }
