@@ -1,3 +1,5 @@
+#문제 예시는 맞으나 채점하면 런타임 에러뜸
+
 #!/usr/bin/env perl
 
 use strict;
