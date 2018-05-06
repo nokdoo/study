@@ -35,6 +35,12 @@ public class Response {
       if (file.exists()) {
         fis = new FileInputStream(file);
         int ch = fis.read(bytes, 0, BUFFER_SIZE);
+		String method = "HTTP/1.1 200 OK\r\n" +
+			"content-Type: text/html\r\n" +
+			"\r\n"
+			;
+			output.write(method.getBytes());
+
         while (ch!=-1) {
           output.write(bytes, 0, ch);
           ch = fis.read(bytes, 0, BUFFER_SIZE);
