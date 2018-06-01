@@ -18,9 +18,11 @@ public class Response {
   private static final int BUFFER_SIZE = 1024;
   Request request;
   OutputStream output;
+  String contentType;
 
-  public Response(OutputStream output) {
+  public Response(OutputStream output, String contentType) {
     this.output = output;
+	this.contentType = contentType;
   }
 
   public void setRequest(Request request) {
@@ -36,10 +38,9 @@ public class Response {
         fis = new FileInputStream(file);
         int ch = fis.read(bytes, 0, BUFFER_SIZE);
 		String method = "HTTP/1.1 200 OK\r\n" +
-			"content-Type: text/html\r\n" +
-			"\r\n"
-			;
-			output.write(method.getBytes());
+			"content-Type: " + contentType + "\r\n" +
+			"\r\n";
+		output.write(method.getBytes());
 
         while (ch!=-1) {
           output.write(bytes, 0, ch);
