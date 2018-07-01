@@ -52,11 +52,11 @@ void swap(struct node *A, struct node *B){
 
 void Rotate(struct node **P, int d){
 	struct node *R = (*P)->right, *L = (*P)->left;
-	if(d == -1){
+	if(d == -1){//left rot
 		swap((*P), (*P)->right);
 		R->right = (*P)->left;
 		(*P)->left = R;
-	}else{
+	}else if(d == 1){//right rot
 		swap((*P), (*P)->left);
 		L->left = (*P)->right;
 		(*P)->right = L;
@@ -283,7 +283,7 @@ int main(){
 	if(tmp == NULL){
 		printf("NULL\n");
 	}else{
-		printf("%c  ", tmp->key);
+		//printf("%c  ", tmp->key);
 	}
 //	AVLTreeDelete('B', &tree);
 //	AVLTreeInsert('B', &tree);

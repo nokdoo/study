@@ -1,0 +1,19 @@
+  3 sub dir_walk{
+  4     my ($top, $code) = @_;
+  5     my $DIR;
+  6 
+  7     $code->($top);
+  8 
+  9     if(-d $top){
+ 10         my $file;
+ 11         unless (opendir $DIR, $top){
+ 12             warn "Couldn't open directory $top: $!; skipping.\n";
+ 13             return;
+ 14         }
+ 15         while ($file = readdir $DIR){
+ 16             next if $file eq '.' || $file eq '..';
+ 17             dir_walk("$top/$file", $code);
+ 18         }
+ 19     }
+ 20 }
+
