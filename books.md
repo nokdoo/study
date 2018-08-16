@@ -1,10 +1,12 @@
 # Computer Networks
+# cn
 	1. Introduction
 		1.1 Uses of computer networks
 
 ---
 
 # Computer System - A Programmer's Perspective
+# csapp
 	1. A Tour of Computer Systems
 	2. Representing and Manipulating Information
 	3. Machine-Level Representation of Programs
@@ -17,6 +19,7 @@
 # Mastering Regular Expressions
 	1. Introduction to Regular Expressions
 	2. Extended Introductory Examples
+	3. Overview of Regular Expression Features and Flavors
 
 
 ---
@@ -36,8 +39,8 @@
 	12. Enumerations, Autoboxing, Static Import, and Annotations
 	13. Generics
 	14. Lambda Expressions and Method References
-	15. 
-	16. 
-	17.
+	15. #Applets, Events, and Miscellaneous Topics
+	16. #Introducing Swing
+	17. #Introducing JavaFX 
 
 
