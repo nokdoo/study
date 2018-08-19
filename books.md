@@ -1,12 +1,12 @@
 # Computer Networks
-# cn
+cn
 	1. Introduction
 		1.1 Uses of computer networks
 
 ---
 
 # Computer System - A Programmer's Perspective
-# csapp
+csapp
 	1. A Tour of Computer Systems
 	2. Representing and Manipulating Information
 	3. Machine-Level Representation of Programs
@@ -20,7 +20,7 @@
 ---
 
 # Mastering Regular Expressions
-# mre
+mre
 	1. Introduction to Regular Expressions
 	2. Extended Introductory Examples
 	3. Overview of Regular Expression Features and Flavors
@@ -28,7 +28,7 @@
 ---
 
 # Java - A Beginner's Guide
-# jabg
+jabg
 	1. Java Fundamentals
 	2. Introducing Data Types and Operators
 	3. Program Control Statements
@@ -48,13 +48,13 @@
 	17. #Introducing JavaFX 
 
 # Structure and Interpretation of Computer Programs
-# sicp
+sicp
 	1. Buidling Abstractions with Procedures
 
 ---
 
 # Operating System Concepts
-# osc
+osc
 	1. Introduction
 	2. Operating-System Structures
 	3. Processes
@@ -77,7 +77,7 @@
 ---
 
 # The C Programming Language
-# tcpl
+tcpl
 	1. A Tutorial Introduction
 	2. Types, Operators, and Expressions
 	3. Control Flow
@@ -90,7 +90,7 @@
 ---
 
 # Learning Perl
-# lp
+lp
 	1. Introduction
 	2. Scalar Data
 	3. List and Arrays
@@ -111,7 +111,7 @@
 ---
 
 # Intermediate Perl
-# ip
+ip
 	1. Introduction
 	2. Using Modules
 	3. Intermediate Foundations
@@ -121,7 +121,7 @@
 ---
 
 # Data Structure & Their Algorithms
-# dsta
+dsta
 	1. Introduction
 	2. Algorithm Analysis
 	3. Lists
@@ -134,14 +134,14 @@
 ---
 
 # Java8 in Action
-# j8ia
+j8ia
 	1. Java 8: why should you care?
 	2. Passing code with behavior parameterization
 
 ---
 
 # Higher-Order Perl
-# hop
+hop
 	1. Recursion and Callbacks
 	2. Dispatch Tables
 	3. Caching and Memoization
@@ -156,14 +156,14 @@
 ---
 
 # Effective Java
-# ej
+ej
 	1. Introduction
 	2. Creating and Destroying Objects
 
 ---
 
 # Perl Cookbook
-# pc
+pc
 	1. Strings
 		1.1 Accessing Substrings
 		1.15 Interpolating Functions and Expressions Within Strings
@@ -197,7 +197,7 @@
 ---
 
 # Programming Perl
-# pp
+pp
 
 	1. An Overview of Perl
 	2. Bits and Pieces
@@ -207,7 +207,7 @@
 ---
 
 # Java Cookbook
-# jc
+jc
 	1. Getting Started: Compiling, Running, and Debugging
 	2. Interacting with the Environment
 	3. Strings and Things
