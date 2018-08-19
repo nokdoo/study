@@ -1,5 +1,6 @@
 # Computer Networks
 cn
+
 	1. Introduction
 		1.1 Uses of computer networks
 
@@ -7,6 +8,7 @@ cn
 
 # Computer System - A Programmer's Perspective
 csapp
+
 	1. A Tour of Computer Systems
 	2. Representing and Manipulating Information
 	3. Machine-Level Representation of Programs
@@ -21,6 +23,7 @@ csapp
 
 # Mastering Regular Expressions
 mre
+
 	1. Introduction to Regular Expressions
 	2. Extended Introductory Examples
 	3. Overview of Regular Expression Features and Flavors
@@ -29,6 +32,7 @@ mre
 
 # Java - A Beginner's Guide
 jabg
+
 	1. Java Fundamentals
 	2. Introducing Data Types and Operators
 	3. Program Control Statements
@@ -49,12 +53,14 @@ jabg
 
 # Structure and Interpretation of Computer Programs
 sicp
+
 	1. Buidling Abstractions with Procedures
 
 ---
 
 # Operating System Concepts
 osc
+
 	1. Introduction
 	2. Operating-System Structures
 	3. Processes
@@ -78,6 +84,7 @@ osc
 
 # The C Programming Language
 tcpl
+
 	1. A Tutorial Introduction
 	2. Types, Operators, and Expressions
 	3. Control Flow
@@ -91,6 +98,7 @@ tcpl
 
 # Learning Perl
 lp
+
 	1. Introduction
 	2. Scalar Data
 	3. List and Arrays
@@ -112,6 +120,7 @@ lp
 
 # Intermediate Perl
 ip
+
 	1. Introduction
 	2. Using Modules
 	3. Intermediate Foundations
@@ -122,6 +131,7 @@ ip
 
 # Data Structure & Their Algorithms
 dsta
+
 	1. Introduction
 	2. Algorithm Analysis
 	3. Lists
@@ -135,6 +145,7 @@ dsta
 
 # Java8 in Action
 j8ia
+
 	1. Java 8: why should you care?
 	2. Passing code with behavior parameterization
 
@@ -142,6 +153,7 @@ j8ia
 
 # Higher-Order Perl
 hop
+
 	1. Recursion and Callbacks
 	2. Dispatch Tables
 	3. Caching and Memoization
@@ -157,6 +169,7 @@ hop
 
 # Effective Java
 ej
+
 	1. Introduction
 	2. Creating and Destroying Objects
 
@@ -164,6 +177,7 @@ ej
 
 # Perl Cookbook
 pc
+
 	1. Strings
 		1.1 Accessing Substrings
 		1.15 Interpolating Functions and Expressions Within Strings
@@ -208,6 +222,7 @@ pp
 
 # Java Cookbook
 jc
+
 	1. Getting Started: Compiling, Running, and Debugging
 	2. Interacting with the Environment
 	3. Strings and Things
