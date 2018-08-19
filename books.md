@@ -13,18 +13,22 @@
 		3.1 A Historical Perspective
 		3.1 Program Encodings
 		3.3 Data Formats
+		3.4 Accessing Information
+			3.4.1 Operand Specifiers
+			3.4.2 Data Movement Instructions
 
 ---
 
 # Mastering Regular Expressions
+# mre
 	1. Introduction to Regular Expressions
 	2. Extended Introductory Examples
 	3. Overview of Regular Expression Features and Flavors
 
-
 ---
 
 # Java - A Beginner's Guide
+# jabg
 	1. Java Fundamentals
 	2. Introducing Data Types and Operators
 	3. Program Control Statements
@@ -43,4 +47,173 @@
 	16. #Introducing Swing
 	17. #Introducing JavaFX 
 
+# Structure and Interpretation of Computer Programs
+# sicp
+	1. Buidling Abstractions with Procedures
+
+---
+
+# Operating System Concepts
+# osc
+	1. Introduction
+	2. Operating-System Structures
+	3. Processes
+	4. Threads
+	5. Process Synchronization
+	6. CPU Scheduling
+	7. Deadlocks
+	8. #Main Memory
+		8.1 Background
+		8.2 Swapping
+		8.3 Contiguous Memory Allocation
+		8.4 Segmentation
+		8.5 Paging
+	9. Virtual Memory
+		9.1 Background
+		9.2 Demand Paging
+		9.3 Copy-on-Write
+		9.4 Page Replacement
+
+---
+
+# The C Programming Language
+# tcpl
+	1. A Tutorial Introduction
+	2. Types, Operators, and Expressions
+	3. Control Flow
+	4. Functions and Program Structure
+	5. Pointers and Arrays
+	6. Strctures
+	7. Input and Output
+	8. The UNIX System Interface
+
+---
+
+# Learning Perl
+# lp
+	1. Introduction
+	2. Scalar Data
+	3. List and Arrays
+	4. Subroutines
+	5. Input and Output
+	6. Hashes
+	7. Regular Expressions
+	8. Matching with Regular Expressions
+	9. Processing Text with Regular Expressions
+	10. More Control Structures
+	11. Perl Modules
+	12. File Tests
+	13. Directory Operations
+	14. String and Sorting
+	15. Porcess Management
+	16. Some Advanced Perl Techniques
+
+---
+
+# Intermediate Perl
+# ip
+	1. Introduction
+	2. Using Modules
+	3. Intermediate Foundations
+	4. Introduction to References
+	5. References and Scoping
+
+---
+
+# Data Structure & Their Algorithms
+# dsta
+	1. Introduction
+	2. Algorithm Analysis
+	3. Lists
+	4. Trees
+	5. Arrays and Strings
+	6. List and Tree Implemetations of Sets
+	7. Tree Structures for Dynamic Dictionaries
+		7.1 AVL Trees
+
+---
+
+# Java8 in Action
+# j8ia
+	1. Java 8: why should you care?
+	2. Passing code with behavior parameterization
+
+---
+
+# Higher-Order Perl
+# hop
+	1. Recursion and Callbacks
+	2. Dispatch Tables
+	3. Caching and Memoization
+		3.1 Caching Fixes Recursion
+		3.2 Inline Caching
+		3.3 Good Ideas
+		3.4 Memoization
+		3.5 The Memoize Module
+		3.6 Caveats
+		3.7 Key Generation
+
+---
+
+# Effective Java
+# ej
+	1. Introduction
+	2. Creating and Destroying Objects
+
+---
+
+# Perl Cookbook
+# pc
+	1. Strings
+		1.1 Accessing Substrings
+		1.15 Interpolating Functions and Expressions Within Strings
+	5. Hashes
+		5.13 Hashing References
+	6. Pattern Matching
+		6.17 Matching Nested Patterns
+	7. File Access
+		7.0 Introduction
+	10. Subroutines
+		10.0 Introduction
+		10.1 Accessing Subroutine Arguments
+		10.2 Making Variables Private to a Function
+		10.3 Creating Persistent Private Variables
+		10.4 Determining Current Function Name
+		10.5 Passing Arrays and Hashes by Reference
+		10.6 Detecting Return Context
+		10.7 Passing by Names Parameter
+		10.8 Skipping Selected Return Values
+		10.9 Returning More Than One Array or Hash
+		10.10 Returning Failure
+		10.11 Prototyping Functions
+		10.12 Handling Exceptions
+	12. Packages, Libraries, and Modules
+		12.0 Introduction
+		12.1 Defining a Module's Interface
+		12.2 Trapping Errors in require or use
+		12.4 Making Variables Private to a Module
+		12.5 Making Functions Private to a Module
+
+---
+
+# Programming Perl
+# pp
+
+	1. An Overview of Perl
+	2. Bits and Pieces
+	3. Unary and Binary Operators
+	4. Statements and Declarations
+
+---
+
+# Java Cookbook
+# jc
+	1. Getting Started: Compiling, Running, and Debugging
+	2. Interacting with the Environment
+	3. Strings and Things
+	4. Pattern Matching with Regular Expressions
+	5. Numbers
+	7. Structuring Data with Java
+	13. Network Clients
+	16. Server-Side Java
 
