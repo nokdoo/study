@@ -68,12 +68,9 @@ osc
 	5. Process Synchronization
 	6. CPU Scheduling
 	7. Deadlocks
-	8. #Main Memory
+	8. Main Memory
 		8.1 Background
-		8.2 Swapping
-		8.3 Contiguous Memory Allocation
-		8.4 Segmentation
-		8.5 Paging
+
 	9. Virtual Memory
 		9.1 Background
 		9.2 Demand Paging
