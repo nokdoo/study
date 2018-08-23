@@ -229,3 +229,24 @@ jc
 	13. Network Clients
 	16. Server-Side Java
 
+# Mastering Algorithm with C
+mac
+
+	1. Preliminaries
+	2. Pointer Manipulation
+	3. Recursion
+	4. Analysis of Algorithms
+	5. Linked Lists
+		Description of Linked Lists
+		Interface for Linked Lists
+		Implementation and Analysis of Linked Lists
+		Implementaion and Analysis of Doubly Linked Lists
+
+# Beginning Linux Programming
+blp
+
+	1. Getting started
+	2. Shell Programming
+	3. Working with Files
+	4. The Linux Environment
+	15. Sockets
