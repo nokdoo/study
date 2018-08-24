@@ -3,6 +3,7 @@ cn
 
 	1. Introduction
 		1.1 Uses of computer networks
+		1.2 Network Hardware
 
 ---
 
