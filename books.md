@@ -251,3 +251,14 @@ blp
 	3. Working with Files
 	4. The Linux Environment
 	15. Sockets
+
+# The Unix Programming Environment
+tupe
+
+	1. UNIX for Beginners
+	2. The File System
+
+# Mastering Algorithms with Perl
+map
+
+	1. Introduction
