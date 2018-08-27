@@ -215,6 +215,7 @@ pp
 	2. Bits and Pieces
 	3. Unary and Binary Operators
 	4. Statements and Declarations
+	10. Packages
 
 ---
 
@@ -227,6 +228,7 @@ jc
 	4. Pattern Matching with Regular Expressions
 	5. Numbers
 	7. Structuring Data with Java
+	8. Object-Oriented Techniques
 	13. Network Clients
 	16. Server-Side Java
 
