@@ -209,13 +209,14 @@ pc
 ---
 
 # Programming Perl
-pp
+pperl
 
 	1. An Overview of Perl
 	2. Bits and Pieces
 	3. Unary and Binary Operators
 	4. Statements and Declarations
 	10. Packages
+	11. Modules
 
 ---
 
