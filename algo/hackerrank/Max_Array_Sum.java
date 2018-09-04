@@ -43,10 +43,5 @@ public class Max_Array_Sum
 			bufferedWriter.write(String.valueOf(res));
 	        bufferedWriter.newLine();
 		}
-
-		for(int a : array)
-		{
-			System.out.println(a);
-		}
 	}
 }

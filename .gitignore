@@ -9,3 +9,5 @@ RemoteSystemsTempFiles/
 tags
 
 !c/*.out
+
+algo/hackerrank/output.txt
