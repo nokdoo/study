@@ -260,8 +260,16 @@ tupe
 
 	1. UNIX for Beginners
 	2. The File System
+	3. Using The Shell
 
 # Mastering Algorithms with Perl
 map
 
 	1. Introduction
+
+# JAVA 8 In Action
+jia
+
+	1. Java 8: why should you care?
+	2. Passing code with behavior parameterization
+	3. Lambda expressions
