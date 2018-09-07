@@ -10,68 +10,55 @@ public class Abbreviation {
 
     static String pattern = "[a-z]*";
     static Pattern p = Pattern.compile(pattern);
-    static HashMap<Long, Boolean> map = new HashMap<Long, Boolean>();
+    static HashMap<Long, Boolean> map; 
 
     static Long hash(int a, int b)
     {
         return a * 10000l + b;
     }
 
-    static boolean subAbbreviation(String a, String b, int idx_a, int idx_b)
-    {
-        if(a.length() == idx_a) return false;
-        if(Character.toUpperCase(a.charAt(idx_a)) == b.charAt(idx_b)) return true;
-        else return false;
-    }
+	public static boolean abbreviation(char[] a, char[] b, int ia, int ib)
+	{
+		if(map.containsKey(hash(ia, ib)))
+		{
+			return map.get(hash(ia, ib));
+		}
 
-    static boolean abbreviation(String a, String b, int idx_a, int idx_b)
-    {
-        if(map.containsKey(hash(idx_a, idx_b)))
-            return map.get(hash(idx_a, idx_b));
+		if(ia == a.length)
+		{
+			if(ib == b.length) return true;
+			else return false;
+		}
 
-        boolean result = false;
-        if(b.length() == idx_b)
-        {
-            Matcher m = p.matcher(a.substring(idx_a));
-            if(m.matches()) result = true;
-            else result = false;
-            return result;
-        }
+		if(ib == b.length)
+		{
+			Pattern p = Pattern.compile(pattern);
+			Matcher m = p.matcher(new String(a, ia, a.length-ia));
+			if(m.matches()) return true;
+			else return false;
+		}
 
-        if(a.length() == idx_a)
-        {
-            if(b.length() == idx_b) result = true;
-            else result = false;
-            return result;
-        }
-
-        if(Character.toUpperCase(a.charAt(idx_a)) == b.charAt(idx_b))
-        {
-            if(Character.isLowerCase(a.charAt(idx_a)))
-            {
-                if(subAbbreviation(a, b, idx_a+1, idx_b))
-                {
-                    result = (abbreviation(a, b, idx_a+1, idx_b) || abbreviation(a, b, idx_a+1, idx_b+1));
-                    //map.put(hash(idx_a, idx_b), result);
-                }
-                else result = abbreviation(a, b, idx_a+1, idx_b+1);
-            }
-            else
-            {
-                result = abbreviation(a, b, idx_a+1, idx_b+1);
-            }
-            return result;
-
-        }
-        else
-        {
-            if(Character.isLowerCase(a.charAt(idx_a))) 
-                result = abbreviation(a, b, idx_a+1, idx_b);
-            else
-                result = abbreviation(a, b, idx_a-idx_b+1, 0);
-            return result;
-        }
-    }
+		if(Character.isUpperCase(a[ia]))
+		{
+			if(a[ia] == b[ib]) return abbreviation(a, b, ia+1, ib+1);
+			else return false;
+		}
+		else
+		{
+			if(Character.toUpperCase(a[ia]) == b[ib])
+			{
+				Boolean result1 = abbreviation(a, b, ia+1, ib+1);
+				map.put(hash(ia+1, ib+1), result1);
+				Boolean result2 = abbreviation(a, b, ia+1, ib);
+				map.put(hash(ia+1, ib), result2);
+				return result1 || result2;
+			}
+			else
+			{
+				return abbreviation(a, b, ia+1, ib);
+			}
+		}
+	}
 
     public static void main(String[] agrs) throws IOException
     {
@@ -87,8 +74,9 @@ public class Abbreviation {
 
             for(int i=0; i<q; i++)
             {
-                String a = bufferedReader.readLine().trim();
-                String b = bufferedReader.readLine().trim();
+				map = new HashMap<Long, Boolean>();
+                char[] a = bufferedReader.readLine().trim().toCharArray();
+                char[] b = bufferedReader.readLine().trim().toCharArray();
 
                 boolean result = abbreviation(a, b, 0, 0);
                 if(result == true) bufferedWriter.write("YES");
