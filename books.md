@@ -275,3 +275,9 @@ jia
 	3. Lambda expressions
 	4. Introducing streams
 	5. Working with streams
+
+# Object Oriented Perl
+oop
+
+	1. What you need to know first
+	2. What you need to know second
