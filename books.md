@@ -56,6 +56,7 @@ jabg
 sicp
 
 	1. Buidling Abstractions with Procedures
+		1.1 The Elements of Programming
 
 ---
 
@@ -282,3 +283,17 @@ oop
 	1. What you need to know first
 	2. What you need to know second
 	3. Getting Started
+
+# How Tomcat Works
+htw
+	
+	1. A simple Web Server
+	2. A simple Servlet Container
+	3. Connector
+	4. Tomcat Default Connector
+
+# perldoc
+pd
+
+	* perlootut
+	* perlmod
