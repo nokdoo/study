@@ -283,6 +283,7 @@ oop
 	1. What you need to know first
 	2. What you need to know second
 	3. Getting Started
+	4. Blessing arrays and scalars
 
 # How Tomcat Works
 htw
