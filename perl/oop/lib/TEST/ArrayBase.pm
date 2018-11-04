@@ -2,6 +2,11 @@ package TEST::ArrayBase;
 my $VERSION = 1.0;
 #use strict;
 
+sub import{
+	print "@_"."\n";
+	print caller;
+}
+
 use constant NAME=> 0;
 use constant ARTIST=> 1;
 use constant TRACK=> 2;
