@@ -262,6 +262,7 @@ tupe
 	1. UNIX for Beginners
 	2. The File System
 	3. Using The Shell
+	6. Programming with Standard I/O
 
 # Mastering Algorithms with Perl
 map
