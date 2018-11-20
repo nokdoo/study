@@ -1,6 +1,18 @@
 package CD::Music;
 use strict;
 
+{
+	my $_count = 0;
+
+	sub inc_count{
+		$_count++;
+	}
+
+	sub count{
+		return $_count;
+	}
+}
+
 sub new
 {
 	my ($class) = @_;

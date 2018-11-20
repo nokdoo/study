@@ -3,8 +3,11 @@
 use strict;
 use warnings;
 
-use lib "/home/nokdoo/study/oop/lib/";
+use lib "lib/";
 use CD::Music;
 
 my $music = CD::Music->new(_name=>'kiiii');
-print CD::Music->name();
+$music->inc_count();
+my $music1 = CD::Music->new(_name=>'kiiii');
+
+print $music1->count();
