@@ -3,13 +3,14 @@
 #include <stdbool.h>
 
 #define NSIZE 45
+#define QSIZE 14
 
 struct item
 {
 	char name[NSIZE];
 };
 
-typedef item Item;
+typedef struct item Item;
 
 typedef struct node
 {
@@ -24,4 +25,10 @@ typedef struct queue
 	int count;
 } Queue;
 
-void InitQueue(Queue *pq);
+void Init(Queue *pq);
+bool IsEmpty(Queue *pq);
+bool IsFull(Queue *pq);
+int NumofQ(Queue *pq);
+void Add(Queue *pq, Item *item);
+Item *Shift(Queue *pq);
+#endif
