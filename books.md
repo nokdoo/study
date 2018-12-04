@@ -285,6 +285,9 @@ oop
 	2. What you need to know second
 	3. Getting Started
 	4. Blessing arrays and scalars
+	5. Blessing other things
+	6. Inheritance
+	7. Polymorphism
 
 # How Tomcat Works
 htw
