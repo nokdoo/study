@@ -156,21 +156,23 @@ hop
 	1. Recursion and Callbacks
 	2. Dispatch Tables
 	3. Caching and Memoization
-		3.1 Caching Fixes Recursion
-		3.2 Inline Caching
-		3.3 Good Ideas
-		3.4 Memoization
-		3.5 The Memoize Module
-		3.6 Caveats
-		3.7 Key Generation
+		나중에 한번 다시 읽어보기.
 
 ---
 
 # Effective Java
 ej
 
-	1. Introduction
-	2. Creating and Destroying Objects
+	1. Consider static factory methods instead of constructors
+	2. 
+
+---
+
+# Effective Perl
+ep
+
+	1. The Basics of Perl
+
 
 ---
 
@@ -210,7 +212,7 @@ pc
 ---
 
 # Programming Perl
-pperl
+pp
 
 	1. An Overview of Perl
 	2. Bits and Pieces
