@@ -15,7 +15,7 @@ void show_int(int x){
 }
 
 void show_float(float x){
-	show_pointer((byte_pinter) &x, sizeof(float));
+	show_pointer((byte_pointer) &x, sizeof(float));
 }
 
 void show_pointer(void *x){
@@ -24,6 +24,8 @@ void show_pointer(void *x){
 
 
 int main(){
-	int i = 1110;
-	show_int(i);
+	int a = 1110;
+	show_int(a);
+	float b = 1110.000;
+	show_float(b);
 }

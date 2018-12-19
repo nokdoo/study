@@ -290,6 +290,7 @@ oop
 	5. Blessing other things
 	6. Inheritance
 	7. Polymorphism
+	8. Automating Class Creation
 
 # How Tomcat Works
 htw
