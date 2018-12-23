@@ -300,8 +300,11 @@ htw
 	3. Connector
 	4. Tomcat Default Connector
 
-# perldoc
-pd
+# Mastering Algorithms with Perl
+map
 
-	* perlootut
-	* perlmod
+# Computer Organization and Architecture
+coa
+	
+	8. Operating System Support
+	9. Number Systems
