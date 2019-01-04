@@ -290,7 +290,10 @@ oop
 	5. Blessing other things
 	6. Inheritance
 	7. Polymorphism
-	8. Automating Class Creation
+	8. Automating Class Creation (8.2.2까지 읽고 패스)
+	9. Ties (패스)
+	10. Operator Overloading (10.2.1까지 읽고 패스)
+
 
 # How Tomcat Works
 htw
@@ -306,5 +309,5 @@ map
 # Computer Organization and Architecture
 coa
 	
-	8. Operating System Support
+	8. Operating System Support(8.3까지 읽고 패스)
 	9. Number Systems
