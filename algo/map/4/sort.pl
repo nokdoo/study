@@ -14,10 +14,7 @@ foreach ( @d = @a )
 }
 
 
-require './bubblesmart.pl'; bubblesmart (\@d);
+# require './bubblesmart.pl'; bubblesmart (\@d);
+ require './shellsort.pl'; shellsort (\@d);
 
-
-
-
-
-print @d;
+print "@d\n";
