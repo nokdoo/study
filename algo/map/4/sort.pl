@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-my @a = "a".."l";
+my @a = "a".."z";
 my @d;
 
 srand();
@@ -20,9 +20,14 @@ print "@d\n";
 # require './my_shellsort.pl'; shellsort (\@d);
 # require './heap.pl'; heapify_array_up (\@d);
 
-my @array = qw/wolf boar hawk bear pike lion lynx puma/;
-print "@array\n";
-require './radixsort.pl'; radixsort(\@array);
-print "@array\n";
+# @d = (9,2,8,4,5,3,6,7,1);
+# print "@d\n";
+# require './bucketsort.pl'; bucketsort (\@d, 1, 9);
+
+# my @array = qw/wolf boar hawk bear pike lion lynx puma/;
+# print "@array\n";
+# require './radixsort.pl'; radixsort(\@array);
+# print "@array\n";
+
 
 print "@d\n";

@@ -272,7 +272,7 @@ map
 	1. Introduction
 	2. Basic Data Structures
 	3. Advanced Data Structures
-	4. Sorting(Beating O(NlogN)부터 읽어보자)
+	4. Sorting
 
 # JAVA 8 In Action
 jia
