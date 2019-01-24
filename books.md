@@ -315,3 +315,8 @@ coa
 	
 	8. Operating System Support(8.3까지 읽고 패스)
 	9. Number Systems
+
+# Design Patterns Elements of Reusable Object-Oriented Software
+dp
+
+	* Flyweight
