@@ -293,9 +293,10 @@ oop
 	5. Blessing other things
 	6. Inheritance
 	7. Polymorphism
-	8. Automating Class Creation (8.2.2까지 읽고 패스)
+	8. Automating Class Creation ( 8.2.3부터 패스 )
 	9. Ties (패스)
-	10. Operator Overloading (10.2.1까지 읽고 패스)
+	10. Operator Overloading ( 10.2.2부터 패스 )
+	11. Encapsulation ( 11.3부터 패스)
 
 
 # How Tomcat Works
