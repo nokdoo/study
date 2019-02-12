@@ -1,5 +1,7 @@
-# Computer Networks
-cn
+=encoding utf8
+=pod
+
+=head1 Computer Networks (cn)
 
 	1. Introduction
 		1.1 Uses of computer networks
@@ -7,8 +9,7 @@ cn
 
 ---
 
-# Computer System - A Programmer's Perspective
-csapp
+=head1 Computer System - A Programmer's Perspective (csapp)
 
 	1. A Tour of Computer Systems
 	2. Representing and Manipulating Information
@@ -22,8 +23,7 @@ csapp
 
 ---
 
-# Mastering Regular Expressions
-mre
+=head1 Mastering Regular Expressions (mre)
 
 	1. Introduction to Regular Expressions
 	2. Extended Introductory Examples
@@ -31,8 +31,7 @@ mre
 
 ---
 
-# Java - A Beginner's Guide
-jabg
+=head1 Java - A Beginner's Guide (jabg)
 
 	1. Java Fundamentals
 	2. Introducing Data Types and Operators
@@ -51,8 +50,7 @@ jabg
 
 ---
 
-# JAVA 8 In Action
-jia
+=head1 JAVA 8 In Action (jia)
 
 	1. Java 8: why should you care?
 	2. Passing code with behavior parameterization
@@ -62,15 +60,13 @@ jia
 
 ---
 
-# Effective Java
-ej
+=head1 Effective Java (ej)
 
 	1. Consider static factory methods instead of constructors
 
 ---
 
-# Java Cookbook
-jc
+=head1 Java Cookbook (jc)
 
 	1. Getting Started: Compiling, Running, and Debugging
 	2. Interacting with the Environment
@@ -84,16 +80,14 @@ jc
 
 ---
 
-# Structure and Interpretation of Computer Programs
-sicp
+=head1 Structure and Interpretation of Computer Programs (sicp)
 
 	1. Buidling Abstractions with Procedures
 		1.1 The Elements of Programming
 
 ---
 
-# Operating System Concepts
-osc
+=head1 Operating System Concepts (osc)
 
 	1. Introduction
 	2. Operating-System Structures
@@ -113,8 +107,7 @@ osc
 
 ---
 
-# The C Programming Language
-tcpl
+=head1 The C Programming Language (tcpl)
 
 	1. A Tutorial Introduction
 	2. Types, Operators, and Expressions
@@ -127,8 +120,7 @@ tcpl
 
 ---
 
-# Learning Perl
-lp
+=head1 Learning Perl (lp)
 
 	1. Introduction
 	2. Scalar Data
@@ -149,8 +141,7 @@ lp
 
 ---
 
-# Intermediate Perl
-ip
+=head1 Intermediate Perl (ip)
 
 	1. Introduction
 	2. Using Modules
@@ -160,8 +151,7 @@ ip
 
 ---
 
-# Data Structure & Their Algorithms
-dsta
+=head1 Data Structure & Their Algorithms (dsta)
 
 	1. Introduction
 	2. Algorithm Analysis
@@ -174,8 +164,7 @@ dsta
 
 ---
 
-# Higher-Order Perl
-hop
+=head1 Higher-Order Perl (hop)
 
 	1. Recursion and Callbacks
 	2. Dispatch Tables
@@ -184,15 +173,13 @@ hop
 
 ---
 
-# Effective Perl
-ep
+=head1 Effective Perl (ep)
 
 	1. The Basics of Perl
 
 ---
 
-# Perl Cookbook
-pc
+=head1 Perl Cookbook (pc)
 
 	1. Strings
 		1.1 Accessing Substrings
@@ -226,8 +213,7 @@ pc
 
 ---
 
-# Programming Perl
-pp
+=head1 Programming Perl (pp)
 
 	1. An Overview of Perl
 	2. Bits and Pieces
@@ -238,8 +224,7 @@ pp
 
 ---
 
-# Mastering Algorithm with C
-mac
+=head1 Mastering Algorithm with C (mac)
 
 	1. Preliminaries
 	2. Pointer Manipulation
@@ -253,8 +238,7 @@ mac
 
 ---
 
-# Beginning Linux Programming
-blp
+=head1 Beginning Linux Programming (blp)
 
 	1. Getting started
 	2. Shell Programming
@@ -264,8 +248,7 @@ blp
 
 ---
 
-# The Unix Programming Environment
-tupe
+=head1 The Unix Programming Environment (tupe)
 
 	1. UNIX for Beginners
 	2. The File System
@@ -274,8 +257,7 @@ tupe
 
 ---
 
-# Mastering Algorithms with Perl
-map
+=head1 Mastering Algorithms with Perl (map)
 
 	1. Introduction
 	2. Basic Data Structures
@@ -284,8 +266,7 @@ map
 
 ---
 
-# Object Oriented Perl
-oop
+=head1 Object Oriented Perl (oop)
 
 	1. What you need to know first
 	2. What you need to know second
@@ -301,8 +282,7 @@ oop
 
 ---
 
-# How Tomcat Works
-htw
+=head1 How Tomcat Works (htw)
 	
 	1. A simple Web Server
 	2. A simple Servlet Container
@@ -311,15 +291,15 @@ htw
 
 ---
 
-# Computer Organization and Architecture
-coa
+=head1 Computer Organization and Architecture (coa)
 	
 	8. Operating System Support(8.3까지 읽고 패스)
 	9. Number Systems
 
 ---
 
-# Design Patterns Elements of Reusable Object-Oriented Software
-dp
+=head1 Design Patterns Elements of Reusable Object-Oriented Software (dp)
 
 	* Flyweight
+
+=cut
