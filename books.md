@@ -48,9 +48,41 @@ jabg
 	12. Enumerations, Autoboxing, Static Import, and Annotations
 	13. Generics
 	14. Lambda Expressions and Method References
-	15. #Applets, Events, and Miscellaneous Topics
-	16. #Introducing Swing
-	17. #Introducing JavaFX 
+
+---
+
+# JAVA 8 In Action
+jia
+
+	1. Java 8: why should you care?
+	2. Passing code with behavior parameterization
+	3. Lambda expressions
+	4. Introducing streams
+	5. Working with streams
+
+---
+
+# Effective Java
+ej
+
+	1. Consider static factory methods instead of constructors
+
+---
+
+# Java Cookbook
+jc
+
+	1. Getting Started: Compiling, Running, and Debugging
+	2. Interacting with the Environment
+	3. Strings and Things
+	4. Pattern Matching with Regular Expressions
+	5. Numbers
+	7. Structuring Data with Java
+	8. Object-Oriented Techniques
+	13. Network Clients
+	16. Server-Side Java
+
+---
 
 # Structure and Interpretation of Computer Programs
 sicp
@@ -142,14 +174,6 @@ dsta
 
 ---
 
-# Java8 in Action
-j8ia
-
-	1. Java 8: why should you care?
-	2. Passing code with behavior parameterization
-
----
-
 # Higher-Order Perl
 hop
 
@@ -160,19 +184,10 @@ hop
 
 ---
 
-# Effective Java
-ej
-
-	1. Consider static factory methods instead of constructors
-	2. 
-
----
-
 # Effective Perl
 ep
 
 	1. The Basics of Perl
-
 
 ---
 
@@ -223,19 +238,6 @@ pp
 
 ---
 
-# Java Cookbook
-jc
-
-	1. Getting Started: Compiling, Running, and Debugging
-	2. Interacting with the Environment
-	3. Strings and Things
-	4. Pattern Matching with Regular Expressions
-	5. Numbers
-	7. Structuring Data with Java
-	8. Object-Oriented Techniques
-	13. Network Clients
-	16. Server-Side Java
-
 # Mastering Algorithm with C
 mac
 
@@ -249,6 +251,8 @@ mac
 		Implementation and Analysis of Linked Lists
 		Implementaion and Analysis of Doubly Linked Lists
 
+---
+
 # Beginning Linux Programming
 blp
 
@@ -258,6 +262,8 @@ blp
 	4. The Linux Environment
 	15. Sockets
 
+---
+
 # The Unix Programming Environment
 tupe
 
@@ -265,6 +271,8 @@ tupe
 	2. The File System
 	3. Using The Shell
 	6. Programming with Standard I/O
+
+---
 
 # Mastering Algorithms with Perl
 map
@@ -274,14 +282,7 @@ map
 	3. Advanced Data Structures
 	4. Sorting
 
-# JAVA 8 In Action
-jia
-
-	1. Java 8: why should you care?
-	2. Passing code with behavior parameterization
-	3. Lambda expressions
-	4. Introducing streams
-	5. Working with streams
+---
 
 # Object Oriented Perl
 oop
@@ -298,6 +299,7 @@ oop
 	10. Operator Overloading ( 10.2.2부터 패스 )
 	11. Encapsulation ( 11.3부터 패스)
 
+---
 
 # How Tomcat Works
 htw
@@ -307,14 +309,15 @@ htw
 	3. Connector
 	4. Tomcat Default Connector
 
-# Mastering Algorithms with Perl
-map
+---
 
 # Computer Organization and Architecture
 coa
 	
 	8. Operating System Support(8.3까지 읽고 패스)
 	9. Number Systems
+
+---
 
 # Design Patterns Elements of Reusable Object-Oriented Software
 dp
