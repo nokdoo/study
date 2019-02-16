@@ -1,36 +1,6 @@
 =encoding utf8
 =pod
 
-=head1 Computer Networks (cn)
-
-	1. Introduction
-		1.1 Uses of computer networks
-		1.2 Network Hardware
-
----
-
-=head1 Computer System - A Programmer's Perspective (csapp)
-
-	1. A Tour of Computer Systems
-	2. Representing and Manipulating Information
-	3. Machine-Level Representation of Programs
-		3.1 A Historical Perspective
-		3.1 Program Encodings
-		3.3 Data Formats
-		3.4 Accessing Information
-			3.4.1 Operand Specifiers
-			3.4.2 Data Movement Instructions
-
----
-
-=head1 Mastering Regular Expressions (mre)
-
-	1. Introduction to Regular Expressions
-	2. Extended Introductory Examples
-	3. Overview of Regular Expression Features and Flavors
-
----
-
 =head1 Java - A Beginner's Guide (jabg)
 
 	1. Java Fundamentals
@@ -48,8 +18,6 @@
 	13. Generics
 	14. Lambda Expressions and Method References
 
----
-
 =head1 JAVA 8 In Action (jia)
 
 	1. Java 8: why should you care?
@@ -58,13 +26,9 @@
 	4. Introducing streams
 	5. Working with streams
 
----
-
 =head1 Effective Java (ej)
 
 	1. Consider static factory methods instead of constructors
-
----
 
 =head1 Java Cookbook (jc)
 
@@ -78,15 +42,6 @@
 	13. Network Clients
 	16. Server-Side Java
 
----
-
-=head1 Structure and Interpretation of Computer Programs (sicp)
-
-	1. Buidling Abstractions with Procedures
-		1.1 The Elements of Programming
-
----
-
 =head1 Operating System Concepts (osc)
 
 	1. Introduction
@@ -97,15 +52,7 @@
 	6. CPU Scheduling
 	7. Deadlocks
 	8. Main Memory
-		8.1 Background
-
 	9. Virtual Memory
-		9.1 Background
-		9.2 Demand Paging
-		9.3 Copy-on-Write
-		9.4 Page Replacement
-
----
 
 =head1 The C Programming Language (tcpl)
 
@@ -117,8 +64,6 @@
 	6. Strctures
 	7. Input and Output
 	8. The UNIX System Interface
-
----
 
 =head1 Learning Perl (lp)
 
@@ -139,8 +84,6 @@
 	15. Porcess Management
 	16. Some Advanced Perl Techniques
 
----
-
 =head1 Intermediate Perl (ip)
 
 	1. Introduction
@@ -148,8 +91,6 @@
 	3. Intermediate Foundations
 	4. Introduction to References
 	5. References and Scoping
-
----
 
 =head1 Data Structure & Their Algorithms (dsta)
 
@@ -161,23 +102,6 @@
 	6. List and Tree Implemetations of Sets
 	7. Tree Structures for Dynamic Dictionaries
 		7.1 AVL Trees
-
----
-
-=head1 Higher-Order Perl (hop)
-
-	1. Recursion and Callbacks
-	2. Dispatch Tables
-	3. Caching and Memoization
-		나중에 한번 다시 읽어보기.
-
----
-
-=head1 Effective Perl (ep)
-
-	1. The Basics of Perl
-
----
 
 =head1 Perl Cookbook (pc)
 
@@ -211,61 +135,6 @@
 		12.4 Making Variables Private to a Module
 		12.5 Making Functions Private to a Module
 
----
-
-=head1 Programming Perl (pp)
-
-	1. An Overview of Perl
-	2. Bits and Pieces
-	3. Unary and Binary Operators
-	4. Statements and Declarations
-	10. Packages
-	11. Modules
-
----
-
-=head1 Mastering Algorithm with C (mac)
-
-	1. Preliminaries
-	2. Pointer Manipulation
-	3. Recursion
-	4. Analysis of Algorithms
-	5. Linked Lists
-		Description of Linked Lists
-		Interface for Linked Lists
-		Implementation and Analysis of Linked Lists
-		Implementaion and Analysis of Doubly Linked Lists
-
----
-
-=head1 Beginning Linux Programming (blp)
-
-	1. Getting started
-	2. Shell Programming
-	3. Working with Files
-	4. The Linux Environment
-	15. Sockets
-
----
-
-=head1 The Unix Programming Environment (tupe)
-
-	1. UNIX for Beginners
-	2. The File System
-	3. Using The Shell
-	6. Programming with Standard I/O
-
----
-
-=head1 Mastering Algorithms with Perl (map)
-
-	1. Introduction
-	2. Basic Data Structures
-	3. Advanced Data Structures
-	4. Sorting
-
----
-
 =head1 Object Oriented Perl (oop)
 
 	1. What you need to know first
@@ -279,8 +148,63 @@
 	9. Ties (패스)
 	10. Operator Overloading ( 10.2.2부터 패스 )
 	11. Encapsulation ( 11.3부터 패스)
+    12. Genericity
+    13. Multiple dispatch
+    14. Persistent objects
 
----
+=head1 Programming Perl (pp)
+
+	1. An Overview of Perl
+	2. Bits and Pieces
+	3. Unary and Binary Operators
+	4. Statements and Declarations
+	10. Packages
+	11. Modules
+
+=head1 Higher-Order Perl (hop)
+
+	1. Recursion and Callbacks
+	2. Dispatch Tables
+	3. Caching and Memoization
+		나중에 한번 다시 읽어보기.
+
+=head1 Effective Perl (ep)
+
+	1. The Basics of Perl
+
+=head1 Mastering Algorithm with C (mac)
+
+	1. Preliminaries
+	2. Pointer Manipulation
+	3. Recursion
+	4. Analysis of Algorithms
+	5. Linked Lists
+		Description of Linked Lists
+		Interface for Linked Lists
+		Implementation and Analysis of Linked Lists
+		Implementaion and Analysis of Doubly Linked Lists
+
+=head1 Beginning Linux Programming (blp)
+
+	1. Getting started
+	2. Shell Programming
+	3. Working with Files
+	4. The Linux Environment
+	15. Sockets
+
+=head1 The Unix Programming Environment (tupe)
+
+	1. UNIX for Beginners
+	2. The File System
+	3. Using The Shell
+	6. Programming with Standard I/O
+
+=head1 Mastering Algorithms with Perl (map)
+
+	1. Introduction
+	2. Basic Data Structures
+	3. Advanced Data Structures
+	4. Sorting
 
 =head1 How Tomcat Works (htw)
 	
@@ -289,17 +213,47 @@
 	3. Connector
 	4. Tomcat Default Connector
 
----
-
 =head1 Computer Organization and Architecture (coa)
 	
 	8. Operating System Support(8.3까지 읽고 패스)
 	9. Number Systems
 
----
-
 =head1 Design Patterns Elements of Reusable Object-Oriented Software (dp)
 
 	* Flyweight
+
+=head1 Computer Networks (cn)
+
+	1. Introduction
+		1.1 Uses of computer networks
+		1.2 Network Hardware
+
+=head1 Computer System - A Programmer's Perspective (csapp)
+
+	1. A Tour of Computer Systems
+	2. Representing and Manipulating Information
+	3. Machine-Level Representation of Programs
+		3.1 A Historical Perspective
+		3.1 Program Encodings
+		3.3 Data Formats
+		3.4 Accessing Information
+			3.4.1 Operand Specifiers
+			3.4.2 Data Movement Instructions
+
+=head1 Mastering Regular Expressions (mre)
+
+	1. Introduction to Regular Expressions
+	2. Extended Introductory Examples
+	3. Overview of Regular Expression Features and Flavors
+
+=head1 Structure and Interpretation of Computer Programs (sicp)
+
+	1. Buidling Abstractions with Procedures
+		1.1 The Elements of Programming
+
+=head1 Introduction to Algorithms (ita)
+
+	1. The Role of Algorithms in Computing
+	2. Getting Started
 
 =cut
