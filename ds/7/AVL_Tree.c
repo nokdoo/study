@@ -279,13 +279,15 @@ int main(){
 	AVLTreeInsert('P', &tree);
 	AVLTreeInsert('V', &tree);
 	AVLTreeInsert('M', &tree);
+	InorderPrint(tree);
+	printf("\n");
 	struct node *tmp = InorderSuccessor(&tree, test);
 	if(tmp == NULL){
 		printf("NULL\n");
 	}else{
 		//printf("%c  ", tmp->key);
 	}
-//	AVLTreeDelete('B', &tree);
+	AVLTreeDelete('B', &tree);
 //	AVLTreeInsert('B', &tree);
 //	AVLTreeDelete('F', &tree);
 //	AVLTreeInsert('F', &tree);
@@ -295,4 +297,5 @@ int main(){
 //	AVLTreeInsert('R', &tree);
 
 	InorderPrint(tree);
+	printf("\n");
 }
