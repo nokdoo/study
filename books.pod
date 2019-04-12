@@ -41,6 +41,7 @@
 	8. Object-Oriented Techniques
 	13. Network Clients
 	16. Server-Side Java
+	23. Relection, or "A Class Named Class"
 
 =head1 Operating System Concepts (osc)
 
@@ -101,7 +102,6 @@
 	5. Arrays and Strings
 	6. List and Tree Implemetations of Sets
 	7. Tree Structures for Dynamic Dictionaries
-		7.1 AVL Trees
 
 =head1 Perl Cookbook (pc)
 
