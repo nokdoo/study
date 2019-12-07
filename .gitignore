@@ -11,3 +11,5 @@ tags
 !c/*.out
 
 algo/hackerrank/output.txt
+
+react/vanilla-redux/node_modules
